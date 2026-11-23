@@ -4,10 +4,12 @@
 """
 from __future__ import annotations
 
+import json
 import time
 from typing import Any
 
 from app.services.base import BaseModuleService
+from app.services import relation_evidence
 from app.store import store
 
 
@@ -98,11 +100,19 @@ class RelationExtractService(BaseModuleService):
                         "extracted_at": time.time(),
                     })
 
-        # 按置信度去重
+        # 按置信度去重（共用关系证据组口径：分组键/最高分/同分先到）
+        # 证据组在去重前的原始候选上归集，保留同组全部来源，再产出胜出记录；
+        # 输入校验值同样基于去重前原始候选，保证可由输入完整重算。
+        evidence_rows = self.build_relation_evidence(relations)
+        input_checksum = relation_evidence.canonical_checksum(relations)
         relations = self._deduplicate_relations(relations)
 
         output_path = self._data_dir("relations") / f"{entity_set_id}_relations.jsonl"
         written = self._write_jsonl(output_path, relations)
+
+        # 持久化可验证的去重后关系证据组：保留每组全部候选、胜出者与输入校验值，
+        # 供知识图谱构建读取同一份去重口径并可由输入重算首个生效结果。
+        self._write_relation_evidence(entity_set_id, evidence_rows, input_checksum)
 
         # 写入检查点
         self._write_checkpoint(f"relation_{entity_set_id}", {
@@ -130,10 +140,58 @@ class RelationExtractService(BaseModuleService):
         }
 
     def _deduplicate_relations(self, relations: list[dict[str, Any]]) -> list[dict[str, Any]]:
-        """按头实体+关系类型+尾实体去重，保留置信度最高的关系记录。"""
-        seen = {}
-        for rel in relations:
-            key = (rel["head_entity"], rel["relation_type"], rel["tail_entity"])
-            if key not in seen or rel["confidence"] > seen[key]["confidence"]:
-                seen[key] = rel
-        return sorted(seen.values(), key=lambda r: r["relation_id"])
+        """按头实体+关系类型+尾实体去重，保留置信度最高的关系记录。
+
+        具体比较与同分处理顺序委托给共享的关系证据组模块，口径与重构前一致：
+        严格大于才替换（同分保留先到者），结果按关系编号排序。
+        """
+        return relation_evidence.deduplicate(
+            relations,
+            relation_evidence.relation_group_key,
+            sort_field="relation_id",
+        )
+
+    def build_relation_evidence(
+        self, relations: list[dict[str, Any]]
+    ) -> list[dict[str, Any]]:
+        """生成去重后的关系证据组行：每组含全部候选、胜出编号与胜出置信度。"""
+        return relation_evidence.evidence_rows(
+            relations, relation_evidence.relation_group_key
+        )
+
+    def _write_relation_evidence(
+        self,
+        entity_set_id: str,
+        evidence_rows: list[dict[str, Any]],
+        input_checksum: str | None = None,
+    ) -> tuple[Any, Any]:
+        """将关系证据组及其输入校验值写入 relation_evidence 目录。
+
+        入参 ``evidence_rows`` 由去重前的原始候选归集而来，保证同组多来源
+        候选完整保留；``input_checksum`` 基于同一份原始输入计算，可由输入
+        完整重算（缺省时按证据组展平候选计算，用于直接调用的场景）。
+
+        - ``<id>_relation_evidence.jsonl``：逐组证据，可由关系输入完整重算；
+        - ``<id>_relation_evidence_manifest.json``：输入校验值与组数，图谱侧
+          据此确认一次输入来源完整一致，不跨批拼接比较结果。
+        """
+        evidence_dir = self._data_dir("relation_evidence")
+        evidence_path = evidence_dir / f"{entity_set_id}_relation_evidence.jsonl"
+        written = self._write_jsonl(evidence_path, evidence_rows)
+
+        if input_checksum is None:
+            input_checksum = relation_evidence.canonical_checksum(
+                [c for row in evidence_rows for c in row["candidates"]]
+            )
+        manifest = {
+            "entity_set_id": entity_set_id,
+            "input_checksum": input_checksum,
+            "input_record_count": sum(row["candidate_count"] for row in evidence_rows),
+            "evidence_group_count": len(evidence_rows),
+            "evidence_records_written": written,
+            "evidence_file": str(evidence_path),
+        }
+        manifest_path = evidence_dir / f"{entity_set_id}_relation_evidence_manifest.json"
+        with open(manifest_path, "w", encoding="utf-8") as f:
+            json.dump(manifest, f, ensure_ascii=False, indent=2, default=str)
+        return evidence_path, manifest_path

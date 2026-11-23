@@ -1,0 +1,6117 @@
+{
+  "scenarios": {
+    "append": {
+      "after_correction": {
+        "kg": {
+          "artifacts": {
+            "graph_checkpoint": {
+              "avg_confidence": 0.91,
+              "edges": 1,
+              "evidence_file": "<DATA_ROOT>/relation_evidence/S-APPEND_graph_relation_evidence.jsonl",
+              "input_checksum": "39ee76934620bfa1",
+              "min_confidence": 0.91,
+              "nodes": 2,
+              "relation_set_id": "S-APPEND",
+              "version": "v1.0"
+            },
+            "graph_evidence_manifest": {
+              "evidence_file": "<DATA_ROOT>/relation_evidence/S-APPEND_graph_relation_evidence.jsonl",
+              "evidence_group_count": 1,
+              "group_key": [
+                "head",
+                "relation",
+                "tail"
+              ],
+              "input_checksum": "39ee76934620bfa1",
+              "input_record_count": 2,
+              "relation_set_id": "S-APPEND",
+              "tie_break_rule": "同分保留输入序列先到者（严格大于才替换）"
+            },
+            "graph_evidence_rows": [
+              {
+                "candidate_count": 1,
+                "candidates": [
+                  {
+                    "confidence": 0.8,
+                    "evidence_sentence": "来源A:戊集团-EMPLOY-王五@0.8",
+                    "record_id": "REL-000020",
+                    "source": "来源A"
+                  }
+                ],
+                "group_key": [
+                  "戊集团",
+                  "EMPLOY",
+                  "王五"
+                ],
+                "winner_confidence": 0.8,
+                "winner_id": "REL-000020"
+              },
+              {
+                "candidate_count": 2,
+                "candidates": [
+                  {
+                    "confidence": 0.8,
+                    "evidence_sentence": "来源A:戊集团-EMPLOY-王五@0.8",
+                    "record_id": "REL-000020",
+                    "source": "来源A"
+                  },
+                  {
+                    "confidence": 0.91,
+                    "evidence_sentence": "来源C-更正:戊集团-EMPLOY-王五@0.91",
+                    "record_id": "REL-000022",
+                    "source": "来源C-更正"
+                  }
+                ],
+                "group_key": [
+                  "戊集团",
+                  "EMPLOY",
+                  "王五"
+                ],
+                "winner_confidence": 0.91,
+                "winner_id": "REL-000022"
+              }
+            ],
+            "graph_triples": [
+              {
+                "confidence": 0.8,
+                "graph_version": "v1.0",
+                "head": "戊集团",
+                "relation": "EMPLOY",
+                "source": "S-APPEND",
+                "tail": "王五",
+                "triple_id": "TRIPLE-REL-000020"
+              },
+              {
+                "confidence": 0.91,
+                "graph_version": "v1.0",
+                "head": "戊集团",
+                "relation": "EMPLOY",
+                "source": "S-APPEND",
+                "tail": "王五",
+                "triple_id": "TRIPLE-REL-000022"
+              }
+            ],
+            "relation_checkpoint": null,
+            "relation_evidence_manifest": {
+              "entity_set_id": "S-APPEND",
+              "evidence_file": "<DATA_ROOT>/relation_evidence/S-APPEND_relation_evidence.jsonl",
+              "evidence_group_count": 1,
+              "evidence_records_written": 1,
+              "input_checksum": "25aae4d6e014ff7c",
+              "input_record_count": 3
+            },
+            "relation_evidence_rows": [
+              {
+                "candidate_count": 2,
+                "candidates": [
+                  {
+                    "confidence": 0.8,
+                    "evidence_sentence": "来源A:戊集团-EMPLOY-王五@0.8",
+                    "record_id": "REL-000020",
+                    "source": "来源A"
+                  },
+                  {
+                    "confidence": 0.8,
+                    "evidence_sentence": "来源B:戊集团-EMPLOY-王五@0.8",
+                    "record_id": "REL-000021",
+                    "source": "来源B"
+                  }
+                ],
+                "group_key": [
+                  "戊集团",
+                  "EMPLOY",
+                  "王五"
+                ],
+                "winner_confidence": 0.8,
+                "winner_id": "REL-000020"
+              },
+              {
+                "candidate_count": 3,
+                "candidates": [
+                  {
+                    "confidence": 0.8,
+                    "evidence_sentence": "来源A:戊集团-EMPLOY-王五@0.8",
+                    "record_id": "REL-000020",
+                    "source": "来源A"
+                  },
+                  {
+                    "confidence": 0.8,
+                    "evidence_sentence": "来源B:戊集团-EMPLOY-王五@0.8",
+                    "record_id": "REL-000021",
+                    "source": "来源B"
+                  },
+                  {
+                    "confidence": 0.91,
+                    "evidence_sentence": "来源C-更正:戊集团-EMPLOY-王五@0.91",
+                    "record_id": "REL-000022",
+                    "source": "来源C-更正"
+                  }
+                ],
+                "group_key": [
+                  "戊集团",
+                  "EMPLOY",
+                  "王五"
+                ],
+                "winner_confidence": 0.91,
+                "winner_id": "REL-000022"
+              }
+            ]
+          },
+          "build_result": {
+            "edges": 1,
+            "nodes": 2,
+            "records_written": 1,
+            "relation_set_id": "S-APPEND",
+            "triples": 1
+          }
+        },
+        "relation_dedup": [
+          {
+            "confidence": 0.91,
+            "evidence_sentence": "来源C-更正:戊集团-EMPLOY-王五@0.91",
+            "head_entity": "戊集团",
+            "head_type": "ORG",
+            "method": "Relation-BERT",
+            "model_version": "v2.3.0",
+            "relation_id": "REL-000022",
+            "relation_type": "EMPLOY",
+            "source": "来源C-更正",
+            "tail_entity": "王五",
+            "tail_type": "PERSON"
+          }
+        ]
+      },
+      "first_effective": {
+        "kg": {
+          "artifacts": {
+            "graph_checkpoint": {
+              "avg_confidence": 0.8,
+              "edges": 1,
+              "evidence_file": "<DATA_ROOT>/relation_evidence/S-APPEND_graph_relation_evidence.jsonl",
+              "input_checksum": "9e6fc34e4e1d7807",
+              "min_confidence": 0.8,
+              "nodes": 2,
+              "relation_set_id": "S-APPEND",
+              "version": "v1.0"
+            },
+            "graph_evidence_manifest": {
+              "evidence_file": "<DATA_ROOT>/relation_evidence/S-APPEND_graph_relation_evidence.jsonl",
+              "evidence_group_count": 1,
+              "group_key": [
+                "head",
+                "relation",
+                "tail"
+              ],
+              "input_checksum": "9e6fc34e4e1d7807",
+              "input_record_count": 1,
+              "relation_set_id": "S-APPEND",
+              "tie_break_rule": "同分保留输入序列先到者（严格大于才替换）"
+            },
+            "graph_evidence_rows": [
+              {
+                "candidate_count": 1,
+                "candidates": [
+                  {
+                    "confidence": 0.8,
+                    "evidence_sentence": "来源A:戊集团-EMPLOY-王五@0.8",
+                    "record_id": "REL-000020",
+                    "source": "来源A"
+                  }
+                ],
+                "group_key": [
+                  "戊集团",
+                  "EMPLOY",
+                  "王五"
+                ],
+                "winner_confidence": 0.8,
+                "winner_id": "REL-000020"
+              }
+            ],
+            "graph_triples": [
+              {
+                "confidence": 0.8,
+                "graph_version": "v1.0",
+                "head": "戊集团",
+                "relation": "EMPLOY",
+                "source": "S-APPEND",
+                "tail": "王五",
+                "triple_id": "TRIPLE-REL-000020"
+              }
+            ],
+            "relation_checkpoint": null,
+            "relation_evidence_manifest": {
+              "entity_set_id": "S-APPEND",
+              "evidence_file": "<DATA_ROOT>/relation_evidence/S-APPEND_relation_evidence.jsonl",
+              "evidence_group_count": 1,
+              "evidence_records_written": 1,
+              "input_checksum": "73d8728cf249e2ed",
+              "input_record_count": 2
+            },
+            "relation_evidence_rows": [
+              {
+                "candidate_count": 2,
+                "candidates": [
+                  {
+                    "confidence": 0.8,
+                    "evidence_sentence": "来源A:戊集团-EMPLOY-王五@0.8",
+                    "record_id": "REL-000020",
+                    "source": "来源A"
+                  },
+                  {
+                    "confidence": 0.8,
+                    "evidence_sentence": "来源B:戊集团-EMPLOY-王五@0.8",
+                    "record_id": "REL-000021",
+                    "source": "来源B"
+                  }
+                ],
+                "group_key": [
+                  "戊集团",
+                  "EMPLOY",
+                  "王五"
+                ],
+                "winner_confidence": 0.8,
+                "winner_id": "REL-000020"
+              }
+            ]
+          },
+          "build_result": {
+            "edges": 1,
+            "nodes": 2,
+            "records_written": 1,
+            "relation_set_id": "S-APPEND",
+            "triples": 1
+          }
+        },
+        "relation_dedup": [
+          {
+            "confidence": 0.8,
+            "evidence_sentence": "来源A:戊集团-EMPLOY-王五@0.8",
+            "head_entity": "戊集团",
+            "head_type": "ORG",
+            "method": "Relation-BERT",
+            "model_version": "v2.3.0",
+            "relation_id": "REL-000020",
+            "relation_type": "EMPLOY",
+            "source": "来源A",
+            "tail_entity": "王五",
+            "tail_type": "PERSON"
+          }
+        ]
+      },
+      "graph_file_after_rebuild": [
+        {
+          "confidence": 0.8,
+          "graph_version": "v1.0",
+          "head": "戊集团",
+          "relation": "EMPLOY",
+          "source": "S-APPEND",
+          "tail": "王五",
+          "triple_id": "TRIPLE-REL-000020"
+        },
+        {
+          "confidence": 0.91,
+          "graph_version": "v1.0",
+          "head": "戊集团",
+          "relation": "EMPLOY",
+          "source": "S-APPEND",
+          "tail": "王五",
+          "triple_id": "TRIPLE-REL-000022"
+        }
+      ],
+      "relation_file_after_rebuild": [
+        {
+          "confidence": 0.8,
+          "evidence_sentence": "来源A:戊集团-EMPLOY-王五@0.8",
+          "head_entity": "戊集团",
+          "head_type": "ORG",
+          "method": "Relation-BERT",
+          "model_version": "v2.3.0",
+          "relation_id": "REL-000020",
+          "relation_type": "EMPLOY",
+          "source": "来源A",
+          "tail_entity": "王五",
+          "tail_type": "PERSON"
+        },
+        {
+          "confidence": 0.91,
+          "evidence_sentence": "来源C-更正:戊集团-EMPLOY-王五@0.91",
+          "head_entity": "戊集团",
+          "head_type": "ORG",
+          "method": "Relation-BERT",
+          "model_version": "v2.3.0",
+          "relation_id": "REL-000022",
+          "relation_type": "EMPLOY",
+          "source": "来源C-更正",
+          "tail_entity": "王五",
+          "tail_type": "PERSON"
+        }
+      ]
+    },
+    "diff": {
+      "kg": {
+        "artifacts": {
+          "graph_checkpoint": {
+            "avg_confidence": 0.93,
+            "edges": 1,
+            "evidence_file": "<DATA_ROOT>/relation_evidence/S-DIFF_graph_relation_evidence.jsonl",
+            "input_checksum": "77e9321058ecb28c",
+            "min_confidence": 0.93,
+            "nodes": 2,
+            "relation_set_id": "S-DIFF",
+            "version": "v1.0"
+          },
+          "graph_evidence_manifest": {
+            "evidence_file": "<DATA_ROOT>/relation_evidence/S-DIFF_graph_relation_evidence.jsonl",
+            "evidence_group_count": 2,
+            "group_key": [
+              "head",
+              "relation",
+              "tail"
+            ],
+            "input_checksum": "77e9321058ecb28c",
+            "input_record_count": 2,
+            "relation_set_id": "S-DIFF",
+            "tie_break_rule": "同分保留输入序列先到者（严格大于才替换）"
+          },
+          "graph_evidence_rows": [
+            {
+              "candidate_count": 1,
+              "candidates": [
+                {
+                  "confidence": 0.93,
+                  "evidence_sentence": "来源B:乙公司-INVEST-5亿元@0.93",
+                  "record_id": "REL-000011",
+                  "source": "来源B"
+                }
+              ],
+              "group_key": [
+                "乙公司",
+                "INVEST",
+                "5亿元"
+              ],
+              "winner_confidence": 0.93,
+              "winner_id": "REL-000011"
+            },
+            {
+              "candidate_count": 1,
+              "candidates": [
+                {
+                  "confidence": 0.5,
+                  "evidence_sentence": "来源A:丙集团-COLLABORATE-丁集团@0.5",
+                  "record_id": "REL-000013",
+                  "source": "来源A"
+                }
+              ],
+              "group_key": [
+                "丙集团",
+                "COLLABORATE",
+                "丁集团"
+              ],
+              "winner_confidence": 0.5,
+              "winner_id": "REL-000013"
+            }
+          ],
+          "graph_triples": [
+            {
+              "confidence": 0.93,
+              "graph_version": "v1.0",
+              "head": "乙公司",
+              "relation": "INVEST",
+              "source": "S-DIFF",
+              "tail": "5亿元",
+              "triple_id": "TRIPLE-REL-000011"
+            }
+          ],
+          "relation_checkpoint": null,
+          "relation_evidence_manifest": {
+            "entity_set_id": "S-DIFF",
+            "evidence_file": "<DATA_ROOT>/relation_evidence/S-DIFF_relation_evidence.jsonl",
+            "evidence_group_count": 2,
+            "evidence_records_written": 2,
+            "input_checksum": "b49611ad2f512237",
+            "input_record_count": 4
+          },
+          "relation_evidence_rows": [
+            {
+              "candidate_count": 3,
+              "candidates": [
+                {
+                  "confidence": 0.66,
+                  "evidence_sentence": "来源A:乙公司-INVEST-5亿元@0.66",
+                  "record_id": "REL-000010",
+                  "source": "来源A"
+                },
+                {
+                  "confidence": 0.93,
+                  "evidence_sentence": "来源B:乙公司-INVEST-5亿元@0.93",
+                  "record_id": "REL-000011",
+                  "source": "来源B"
+                },
+                {
+                  "confidence": 0.81,
+                  "evidence_sentence": "来源C:乙公司-INVEST-5亿元@0.81",
+                  "record_id": "REL-000012",
+                  "source": "来源C"
+                }
+              ],
+              "group_key": [
+                "乙公司",
+                "INVEST",
+                "5亿元"
+              ],
+              "winner_confidence": 0.93,
+              "winner_id": "REL-000011"
+            },
+            {
+              "candidate_count": 1,
+              "candidates": [
+                {
+                  "confidence": 0.5,
+                  "evidence_sentence": "来源A:丙集团-COLLABORATE-丁集团@0.5",
+                  "record_id": "REL-000013",
+                  "source": "来源A"
+                }
+              ],
+              "group_key": [
+                "丙集团",
+                "COLLABORATE",
+                "丁集团"
+              ],
+              "winner_confidence": 0.5,
+              "winner_id": "REL-000013"
+            }
+          ]
+        },
+        "build_result": {
+          "edges": 1,
+          "nodes": 2,
+          "records_written": 1,
+          "relation_set_id": "S-DIFF",
+          "triples": 1
+        }
+      },
+      "relation_dedup": [
+        {
+          "confidence": 0.93,
+          "evidence_sentence": "来源B:乙公司-INVEST-5亿元@0.93",
+          "head_entity": "乙公司",
+          "head_type": "ORG",
+          "method": "Relation-BERT",
+          "model_version": "v2.3.0",
+          "relation_id": "REL-000011",
+          "relation_type": "INVEST",
+          "source": "来源B",
+          "tail_entity": "5亿元",
+          "tail_type": "PERSON"
+        },
+        {
+          "confidence": 0.5,
+          "evidence_sentence": "来源A:丙集团-COLLABORATE-丁集团@0.5",
+          "head_entity": "丙集团",
+          "head_type": "ORG",
+          "method": "Relation-BERT",
+          "model_version": "v2.3.0",
+          "relation_id": "REL-000013",
+          "relation_type": "COLLABORATE",
+          "source": "来源A",
+          "tail_entity": "丁集团",
+          "tail_type": "PERSON"
+        }
+      ]
+    },
+    "full_pipeline": {
+      "graph_checkpoint": {
+        "avg_confidence": 0.9181249999999999,
+        "edges": 16,
+        "evidence_file": "<DATA_ROOT>/relation_evidence/DOC-FULL_parsed_graph_relation_evidence.jsonl",
+        "input_checksum": "4801627e8b8cbf78",
+        "min_confidence": 0.8400000000000001,
+        "nodes": 11,
+        "relation_set_id": "DOC-FULL_parsed",
+        "version": "v1.0"
+      },
+      "graph_evidence_manifest": {
+        "evidence_file": "<DATA_ROOT>/relation_evidence/DOC-FULL_parsed_graph_relation_evidence.jsonl",
+        "evidence_group_count": 16,
+        "group_key": [
+          "head",
+          "relation",
+          "tail"
+        ],
+        "input_checksum": "4801627e8b8cbf78",
+        "input_record_count": 64,
+        "relation_set_id": "DOC-FULL_parsed",
+        "tie_break_rule": "同分保留输入序列先到者（严格大于才替换）"
+      },
+      "graph_evidence_rows": [
+        {
+          "candidate_count": 1,
+          "candidates": [
+            {
+              "confidence": 0.81,
+              "evidence_sentence": "某科技集团 与 张三博士 之间存在「EMPLOY」关系",
+              "record_id": "REL-000001",
+              "source": null
+            }
+          ],
+          "group_key": [
+            "某科技集团",
+            "EMPLOY",
+            "张三博士"
+          ],
+          "winner_confidence": 0.81,
+          "winner_id": "REL-000001"
+        },
+        {
+          "candidate_count": 1,
+          "candidates": [
+            {
+              "confidence": 0.8400000000000001,
+              "evidence_sentence": "某科技集团 与 首席科学家 之间存在「EMPLOY」关系",
+              "record_id": "REL-000002",
+              "source": null
+            }
+          ],
+          "group_key": [
+            "某科技集团",
+            "EMPLOY",
+            "首席科学家"
+          ],
+          "winner_confidence": 0.8400000000000001,
+          "winner_id": "REL-000002"
+        },
+        {
+          "candidate_count": 1,
+          "candidates": [
+            {
+              "confidence": 0.87,
+              "evidence_sentence": "生态合作伙伴 与 张三博士 之间存在「EMPLOY」关系",
+              "record_id": "REL-000003",
+              "source": null
+            }
+          ],
+          "group_key": [
+            "生态合作伙伴",
+            "EMPLOY",
+            "张三博士"
+          ],
+          "winner_confidence": 0.87,
+          "winner_id": "REL-000003"
+        },
+        {
+          "candidate_count": 1,
+          "candidates": [
+            {
+              "confidence": 0.9,
+              "evidence_sentence": "生态合作伙伴 与 首席科学家 之间存在「EMPLOY」关系",
+              "record_id": "REL-000004",
+              "source": null
+            }
+          ],
+          "group_key": [
+            "生态合作伙伴",
+            "EMPLOY",
+            "首席科学家"
+          ],
+          "winner_confidence": 0.9,
+          "winner_id": "REL-000004"
+        },
+        {
+          "candidate_count": 1,
+          "candidates": [
+            {
+              "confidence": 0.93,
+              "evidence_sentence": "某科技集团 与 Beijing 之间存在「LOCATE」关系",
+              "record_id": "REL-000005",
+              "source": null
+            }
+          ],
+          "group_key": [
+            "某科技集团",
+            "LOCATE",
+            "Beijing"
+          ],
+          "winner_confidence": 0.93,
+          "winner_id": "REL-000005"
+        },
+        {
+          "candidate_count": 1,
+          "candidates": [
+            {
+              "confidence": 0.95,
+              "evidence_sentence": "某科技集团 与 Shanghai 之间存在「LOCATE」关系",
+              "record_id": "REL-000006",
+              "source": null
+            }
+          ],
+          "group_key": [
+            "某科技集团",
+            "LOCATE",
+            "Shanghai"
+          ],
+          "winner_confidence": 0.95,
+          "winner_id": "REL-000006"
+        },
+        {
+          "candidate_count": 1,
+          "candidates": [
+            {
+              "confidence": 0.78,
+              "evidence_sentence": "某科技集团 与 总部 之间存在「LOCATE」关系",
+              "record_id": "REL-000007",
+              "source": null
+            }
+          ],
+          "group_key": [
+            "某科技集团",
+            "LOCATE",
+            "总部"
+          ],
+          "winner_confidence": 0.78,
+          "winner_id": "REL-000007"
+        },
+        {
+          "candidate_count": 1,
+          "candidates": [
+            {
+              "confidence": 0.81,
+              "evidence_sentence": "生态合作伙伴 与 Beijing 之间存在「LOCATE」关系",
+              "record_id": "REL-000008",
+              "source": null
+            }
+          ],
+          "group_key": [
+            "生态合作伙伴",
+            "LOCATE",
+            "Beijing"
+          ],
+          "winner_confidence": 0.81,
+          "winner_id": "REL-000008"
+        },
+        {
+          "candidate_count": 1,
+          "candidates": [
+            {
+              "confidence": 0.8400000000000001,
+              "evidence_sentence": "生态合作伙伴 与 Shanghai 之间存在「LOCATE」关系",
+              "record_id": "REL-000009",
+              "source": null
+            }
+          ],
+          "group_key": [
+            "生态合作伙伴",
+            "LOCATE",
+            "Shanghai"
+          ],
+          "winner_confidence": 0.8400000000000001,
+          "winner_id": "REL-000009"
+        },
+        {
+          "candidate_count": 1,
+          "candidates": [
+            {
+              "confidence": 0.87,
+              "evidence_sentence": "生态合作伙伴 与 总部 之间存在「LOCATE」关系",
+              "record_id": "REL-000010",
+              "source": null
+            }
+          ],
+          "group_key": [
+            "生态合作伙伴",
+            "LOCATE",
+            "总部"
+          ],
+          "winner_confidence": 0.87,
+          "winner_id": "REL-000010"
+        },
+        {
+          "candidate_count": 1,
+          "candidates": [
+            {
+              "confidence": 0.9,
+              "evidence_sentence": "某科技集团 与 生态合作伙伴 之间存在「COLLABORATE」关系",
+              "record_id": "REL-000011",
+              "source": null
+            }
+          ],
+          "group_key": [
+            "某科技集团",
+            "COLLABORATE",
+            "生态合作伙伴"
+          ],
+          "winner_confidence": 0.9,
+          "winner_id": "REL-000011"
+        },
+        {
+          "candidate_count": 1,
+          "candidates": [
+            {
+              "confidence": 0.93,
+              "evidence_sentence": "生态合作伙伴 与 某科技集团 之间存在「COLLABORATE」关系",
+              "record_id": "REL-000012",
+              "source": null
+            }
+          ],
+          "group_key": [
+            "生态合作伙伴",
+            "COLLABORATE",
+            "某科技集团"
+          ],
+          "winner_confidence": 0.93,
+          "winner_id": "REL-000012"
+        },
+        {
+          "candidate_count": 1,
+          "candidates": [
+            {
+              "confidence": 0.95,
+              "evidence_sentence": "知识图谱 与 2024年 之间存在「OCCUR_AT」关系",
+              "record_id": "REL-000013",
+              "source": null
+            }
+          ],
+          "group_key": [
+            "知识图谱",
+            "OCCUR_AT",
+            "2024年"
+          ],
+          "winner_confidence": 0.95,
+          "winner_id": "REL-000013"
+        },
+        {
+          "candidate_count": 1,
+          "candidates": [
+            {
+              "confidence": 0.78,
+              "evidence_sentence": "信息抽取 与 2024年 之间存在「OCCUR_AT」关系",
+              "record_id": "REL-000014",
+              "source": null
+            }
+          ],
+          "group_key": [
+            "信息抽取",
+            "OCCUR_AT",
+            "2024年"
+          ],
+          "winner_confidence": 0.78,
+          "winner_id": "REL-000014"
+        },
+        {
+          "candidate_count": 1,
+          "candidates": [
+            {
+              "confidence": 0.81,
+              "evidence_sentence": "某科技集团 与 5亿元 之间存在「INVEST」关系",
+              "record_id": "REL-000015",
+              "source": null
+            }
+          ],
+          "group_key": [
+            "某科技集团",
+            "INVEST",
+            "5亿元"
+          ],
+          "winner_confidence": 0.81,
+          "winner_id": "REL-000015"
+        },
+        {
+          "candidate_count": 1,
+          "candidates": [
+            {
+              "confidence": 0.8400000000000001,
+              "evidence_sentence": "生态合作伙伴 与 5亿元 之间存在「INVEST」关系",
+              "record_id": "REL-000016",
+              "source": null
+            }
+          ],
+          "group_key": [
+            "生态合作伙伴",
+            "INVEST",
+            "5亿元"
+          ],
+          "winner_confidence": 0.8400000000000001,
+          "winner_id": "REL-000016"
+        },
+        {
+          "candidate_count": 2,
+          "candidates": [
+            {
+              "confidence": 0.81,
+              "evidence_sentence": "某科技集团 与 张三博士 之间存在「EMPLOY」关系",
+              "record_id": "REL-000001",
+              "source": null
+            },
+            {
+              "confidence": 0.87,
+              "evidence_sentence": "某科技集团 与 张三博士 之间存在「EMPLOY」关系",
+              "record_id": "REL-000003",
+              "source": null
+            }
+          ],
+          "group_key": [
+            "某科技集团",
+            "EMPLOY",
+            "张三博士"
+          ],
+          "winner_confidence": 0.87,
+          "winner_id": "REL-000003"
+        },
+        {
+          "candidate_count": 2,
+          "candidates": [
+            {
+              "confidence": 0.8400000000000001,
+              "evidence_sentence": "某科技集团 与 首席科学家 之间存在「EMPLOY」关系",
+              "record_id": "REL-000002",
+              "source": null
+            },
+            {
+              "confidence": 0.8400000000000001,
+              "evidence_sentence": "某科技集团 与 首席科学家 之间存在「EMPLOY」关系",
+              "record_id": "REL-000002",
+              "source": null
+            }
+          ],
+          "group_key": [
+            "某科技集团",
+            "EMPLOY",
+            "首席科学家"
+          ],
+          "winner_confidence": 0.8400000000000001,
+          "winner_id": "REL-000002"
+        },
+        {
+          "candidate_count": 2,
+          "candidates": [
+            {
+              "confidence": 0.87,
+              "evidence_sentence": "生态合作伙伴 与 张三博士 之间存在「EMPLOY」关系",
+              "record_id": "REL-000003",
+              "source": null
+            },
+            {
+              "confidence": 0.95,
+              "evidence_sentence": "生态合作伙伴 与 张三博士 之间存在「EMPLOY」关系",
+              "record_id": "REL-000006",
+              "source": null
+            }
+          ],
+          "group_key": [
+            "生态合作伙伴",
+            "EMPLOY",
+            "张三博士"
+          ],
+          "winner_confidence": 0.95,
+          "winner_id": "REL-000006"
+        },
+        {
+          "candidate_count": 2,
+          "candidates": [
+            {
+              "confidence": 0.9,
+              "evidence_sentence": "生态合作伙伴 与 首席科学家 之间存在「EMPLOY」关系",
+              "record_id": "REL-000004",
+              "source": null
+            },
+            {
+              "confidence": 0.93,
+              "evidence_sentence": "生态合作伙伴 与 首席科学家 之间存在「EMPLOY」关系",
+              "record_id": "REL-000005",
+              "source": null
+            }
+          ],
+          "group_key": [
+            "生态合作伙伴",
+            "EMPLOY",
+            "首席科学家"
+          ],
+          "winner_confidence": 0.93,
+          "winner_id": "REL-000005"
+        },
+        {
+          "candidate_count": 2,
+          "candidates": [
+            {
+              "confidence": 0.93,
+              "evidence_sentence": "某科技集团 与 Beijing 之间存在「LOCATE」关系",
+              "record_id": "REL-000005",
+              "source": null
+            },
+            {
+              "confidence": 0.87,
+              "evidence_sentence": "某科技集团 与 Beijing 之间存在「LOCATE」关系",
+              "record_id": "REL-000010",
+              "source": null
+            }
+          ],
+          "group_key": [
+            "某科技集团",
+            "LOCATE",
+            "Beijing"
+          ],
+          "winner_confidence": 0.93,
+          "winner_id": "REL-000005"
+        },
+        {
+          "candidate_count": 2,
+          "candidates": [
+            {
+              "confidence": 0.95,
+              "evidence_sentence": "某科技集团 与 Shanghai 之间存在「LOCATE」关系",
+              "record_id": "REL-000006",
+              "source": null
+            },
+            {
+              "confidence": 0.9,
+              "evidence_sentence": "某科技集团 与 Shanghai 之间存在「LOCATE」关系",
+              "record_id": "REL-000011",
+              "source": null
+            }
+          ],
+          "group_key": [
+            "某科技集团",
+            "LOCATE",
+            "Shanghai"
+          ],
+          "winner_confidence": 0.95,
+          "winner_id": "REL-000006"
+        },
+        {
+          "candidate_count": 2,
+          "candidates": [
+            {
+              "confidence": 0.78,
+              "evidence_sentence": "某科技集团 与 总部 之间存在「LOCATE」关系",
+              "record_id": "REL-000007",
+              "source": null
+            },
+            {
+              "confidence": 0.93,
+              "evidence_sentence": "某科技集团 与 总部 之间存在「LOCATE」关系",
+              "record_id": "REL-000012",
+              "source": null
+            }
+          ],
+          "group_key": [
+            "某科技集团",
+            "LOCATE",
+            "总部"
+          ],
+          "winner_confidence": 0.93,
+          "winner_id": "REL-000012"
+        },
+        {
+          "candidate_count": 2,
+          "candidates": [
+            {
+              "confidence": 0.81,
+              "evidence_sentence": "生态合作伙伴 与 Beijing 之间存在「LOCATE」关系",
+              "record_id": "REL-000008",
+              "source": null
+            },
+            {
+              "confidence": 0.95,
+              "evidence_sentence": "生态合作伙伴 与 Beijing 之间存在「LOCATE」关系",
+              "record_id": "REL-000013",
+              "source": null
+            }
+          ],
+          "group_key": [
+            "生态合作伙伴",
+            "LOCATE",
+            "Beijing"
+          ],
+          "winner_confidence": 0.95,
+          "winner_id": "REL-000013"
+        },
+        {
+          "candidate_count": 2,
+          "candidates": [
+            {
+              "confidence": 0.8400000000000001,
+              "evidence_sentence": "生态合作伙伴 与 Shanghai 之间存在「LOCATE」关系",
+              "record_id": "REL-000009",
+              "source": null
+            },
+            {
+              "confidence": 0.78,
+              "evidence_sentence": "生态合作伙伴 与 Shanghai 之间存在「LOCATE」关系",
+              "record_id": "REL-000014",
+              "source": null
+            }
+          ],
+          "group_key": [
+            "生态合作伙伴",
+            "LOCATE",
+            "Shanghai"
+          ],
+          "winner_confidence": 0.8400000000000001,
+          "winner_id": "REL-000009"
+        },
+        {
+          "candidate_count": 2,
+          "candidates": [
+            {
+              "confidence": 0.87,
+              "evidence_sentence": "生态合作伙伴 与 总部 之间存在「LOCATE」关系",
+              "record_id": "REL-000010",
+              "source": null
+            },
+            {
+              "confidence": 0.81,
+              "evidence_sentence": "生态合作伙伴 与 总部 之间存在「LOCATE」关系",
+              "record_id": "REL-000015",
+              "source": null
+            }
+          ],
+          "group_key": [
+            "生态合作伙伴",
+            "LOCATE",
+            "总部"
+          ],
+          "winner_confidence": 0.87,
+          "winner_id": "REL-000010"
+        },
+        {
+          "candidate_count": 2,
+          "candidates": [
+            {
+              "confidence": 0.9,
+              "evidence_sentence": "某科技集团 与 生态合作伙伴 之间存在「COLLABORATE」关系",
+              "record_id": "REL-000011",
+              "source": null
+            },
+            {
+              "confidence": 0.93,
+              "evidence_sentence": "某科技集团 与 生态合作伙伴 之间存在「COLLABORATE」关系",
+              "record_id": "REL-000019",
+              "source": null
+            }
+          ],
+          "group_key": [
+            "某科技集团",
+            "COLLABORATE",
+            "生态合作伙伴"
+          ],
+          "winner_confidence": 0.93,
+          "winner_id": "REL-000019"
+        },
+        {
+          "candidate_count": 2,
+          "candidates": [
+            {
+              "confidence": 0.93,
+              "evidence_sentence": "生态合作伙伴 与 某科技集团 之间存在「COLLABORATE」关系",
+              "record_id": "REL-000012",
+              "source": null
+            },
+            {
+              "confidence": 0.95,
+              "evidence_sentence": "生态合作伙伴 与 某科技集团 之间存在「COLLABORATE」关系",
+              "record_id": "REL-000020",
+              "source": null
+            }
+          ],
+          "group_key": [
+            "生态合作伙伴",
+            "COLLABORATE",
+            "某科技集团"
+          ],
+          "winner_confidence": 0.95,
+          "winner_id": "REL-000020"
+        },
+        {
+          "candidate_count": 2,
+          "candidates": [
+            {
+              "confidence": 0.95,
+              "evidence_sentence": "知识图谱 与 2024年 之间存在「OCCUR_AT」关系",
+              "record_id": "REL-000013",
+              "source": null
+            },
+            {
+              "confidence": 0.95,
+              "evidence_sentence": "知识图谱 与 2024年 之间存在「OCCUR_AT」关系",
+              "record_id": "REL-000027",
+              "source": null
+            }
+          ],
+          "group_key": [
+            "知识图谱",
+            "OCCUR_AT",
+            "2024年"
+          ],
+          "winner_confidence": 0.95,
+          "winner_id": "REL-000013"
+        },
+        {
+          "candidate_count": 2,
+          "candidates": [
+            {
+              "confidence": 0.78,
+              "evidence_sentence": "信息抽取 与 2024年 之间存在「OCCUR_AT」关系",
+              "record_id": "REL-000014",
+              "source": null
+            },
+            {
+              "confidence": 0.93,
+              "evidence_sentence": "信息抽取 与 2024年 之间存在「OCCUR_AT」关系",
+              "record_id": "REL-000026",
+              "source": null
+            }
+          ],
+          "group_key": [
+            "信息抽取",
+            "OCCUR_AT",
+            "2024年"
+          ],
+          "winner_confidence": 0.93,
+          "winner_id": "REL-000026"
+        },
+        {
+          "candidate_count": 2,
+          "candidates": [
+            {
+              "confidence": 0.81,
+              "evidence_sentence": "某科技集团 与 5亿元 之间存在「INVEST」关系",
+              "record_id": "REL-000015",
+              "source": null
+            },
+            {
+              "confidence": 0.95,
+              "evidence_sentence": "某科技集团 与 5亿元 之间存在「INVEST」关系",
+              "record_id": "REL-000034",
+              "source": null
+            }
+          ],
+          "group_key": [
+            "某科技集团",
+            "INVEST",
+            "5亿元"
+          ],
+          "winner_confidence": 0.95,
+          "winner_id": "REL-000034"
+        },
+        {
+          "candidate_count": 2,
+          "candidates": [
+            {
+              "confidence": 0.8400000000000001,
+              "evidence_sentence": "生态合作伙伴 与 5亿元 之间存在「INVEST」关系",
+              "record_id": "REL-000016",
+              "source": null
+            },
+            {
+              "confidence": 0.9,
+              "evidence_sentence": "生态合作伙伴 与 5亿元 之间存在「INVEST」关系",
+              "record_id": "REL-000032",
+              "source": null
+            }
+          ],
+          "group_key": [
+            "生态合作伙伴",
+            "INVEST",
+            "5亿元"
+          ],
+          "winner_confidence": 0.9,
+          "winner_id": "REL-000032"
+        },
+        {
+          "candidate_count": 3,
+          "candidates": [
+            {
+              "confidence": 0.81,
+              "evidence_sentence": "某科技集团 与 张三博士 之间存在「EMPLOY」关系",
+              "record_id": "REL-000001",
+              "source": null
+            },
+            {
+              "confidence": 0.87,
+              "evidence_sentence": "某科技集团 与 张三博士 之间存在「EMPLOY」关系",
+              "record_id": "REL-000003",
+              "source": null
+            },
+            {
+              "confidence": 0.87,
+              "evidence_sentence": "某科技集团 与 张三博士 之间存在「EMPLOY」关系",
+              "record_id": "REL-000003",
+              "source": null
+            }
+          ],
+          "group_key": [
+            "某科技集团",
+            "EMPLOY",
+            "张三博士"
+          ],
+          "winner_confidence": 0.87,
+          "winner_id": "REL-000003"
+        },
+        {
+          "candidate_count": 3,
+          "candidates": [
+            {
+              "confidence": 0.8400000000000001,
+              "evidence_sentence": "某科技集团 与 首席科学家 之间存在「EMPLOY」关系",
+              "record_id": "REL-000002",
+              "source": null
+            },
+            {
+              "confidence": 0.8400000000000001,
+              "evidence_sentence": "某科技集团 与 首席科学家 之间存在「EMPLOY」关系",
+              "record_id": "REL-000002",
+              "source": null
+            },
+            {
+              "confidence": 0.8400000000000001,
+              "evidence_sentence": "某科技集团 与 首席科学家 之间存在「EMPLOY」关系",
+              "record_id": "REL-000002",
+              "source": null
+            }
+          ],
+          "group_key": [
+            "某科技集团",
+            "EMPLOY",
+            "首席科学家"
+          ],
+          "winner_confidence": 0.8400000000000001,
+          "winner_id": "REL-000002"
+        },
+        {
+          "candidate_count": 3,
+          "candidates": [
+            {
+              "confidence": 0.87,
+              "evidence_sentence": "生态合作伙伴 与 张三博士 之间存在「EMPLOY」关系",
+              "record_id": "REL-000003",
+              "source": null
+            },
+            {
+              "confidence": 0.95,
+              "evidence_sentence": "生态合作伙伴 与 张三博士 之间存在「EMPLOY」关系",
+              "record_id": "REL-000006",
+              "source": null
+            },
+            {
+              "confidence": 0.95,
+              "evidence_sentence": "生态合作伙伴 与 张三博士 之间存在「EMPLOY」关系",
+              "record_id": "REL-000006",
+              "source": null
+            }
+          ],
+          "group_key": [
+            "生态合作伙伴",
+            "EMPLOY",
+            "张三博士"
+          ],
+          "winner_confidence": 0.95,
+          "winner_id": "REL-000006"
+        },
+        {
+          "candidate_count": 3,
+          "candidates": [
+            {
+              "confidence": 0.9,
+              "evidence_sentence": "生态合作伙伴 与 首席科学家 之间存在「EMPLOY」关系",
+              "record_id": "REL-000004",
+              "source": null
+            },
+            {
+              "confidence": 0.93,
+              "evidence_sentence": "生态合作伙伴 与 首席科学家 之间存在「EMPLOY」关系",
+              "record_id": "REL-000005",
+              "source": null
+            },
+            {
+              "confidence": 0.93,
+              "evidence_sentence": "生态合作伙伴 与 首席科学家 之间存在「EMPLOY」关系",
+              "record_id": "REL-000005",
+              "source": null
+            }
+          ],
+          "group_key": [
+            "生态合作伙伴",
+            "EMPLOY",
+            "首席科学家"
+          ],
+          "winner_confidence": 0.93,
+          "winner_id": "REL-000005"
+        },
+        {
+          "candidate_count": 3,
+          "candidates": [
+            {
+              "confidence": 0.93,
+              "evidence_sentence": "某科技集团 与 Beijing 之间存在「LOCATE」关系",
+              "record_id": "REL-000005",
+              "source": null
+            },
+            {
+              "confidence": 0.87,
+              "evidence_sentence": "某科技集团 与 Beijing 之间存在「LOCATE」关系",
+              "record_id": "REL-000010",
+              "source": null
+            },
+            {
+              "confidence": 0.87,
+              "evidence_sentence": "某科技集团 与 Beijing 之间存在「LOCATE」关系",
+              "record_id": "REL-000010",
+              "source": null
+            }
+          ],
+          "group_key": [
+            "某科技集团",
+            "LOCATE",
+            "Beijing"
+          ],
+          "winner_confidence": 0.93,
+          "winner_id": "REL-000005"
+        },
+        {
+          "candidate_count": 3,
+          "candidates": [
+            {
+              "confidence": 0.95,
+              "evidence_sentence": "某科技集团 与 Shanghai 之间存在「LOCATE」关系",
+              "record_id": "REL-000006",
+              "source": null
+            },
+            {
+              "confidence": 0.9,
+              "evidence_sentence": "某科技集团 与 Shanghai 之间存在「LOCATE」关系",
+              "record_id": "REL-000011",
+              "source": null
+            },
+            {
+              "confidence": 0.9,
+              "evidence_sentence": "某科技集团 与 Shanghai 之间存在「LOCATE」关系",
+              "record_id": "REL-000011",
+              "source": null
+            }
+          ],
+          "group_key": [
+            "某科技集团",
+            "LOCATE",
+            "Shanghai"
+          ],
+          "winner_confidence": 0.95,
+          "winner_id": "REL-000006"
+        },
+        {
+          "candidate_count": 3,
+          "candidates": [
+            {
+              "confidence": 0.78,
+              "evidence_sentence": "某科技集团 与 总部 之间存在「LOCATE」关系",
+              "record_id": "REL-000007",
+              "source": null
+            },
+            {
+              "confidence": 0.93,
+              "evidence_sentence": "某科技集团 与 总部 之间存在「LOCATE」关系",
+              "record_id": "REL-000012",
+              "source": null
+            },
+            {
+              "confidence": 0.93,
+              "evidence_sentence": "某科技集团 与 总部 之间存在「LOCATE」关系",
+              "record_id": "REL-000012",
+              "source": null
+            }
+          ],
+          "group_key": [
+            "某科技集团",
+            "LOCATE",
+            "总部"
+          ],
+          "winner_confidence": 0.93,
+          "winner_id": "REL-000012"
+        },
+        {
+          "candidate_count": 3,
+          "candidates": [
+            {
+              "confidence": 0.81,
+              "evidence_sentence": "生态合作伙伴 与 Beijing 之间存在「LOCATE」关系",
+              "record_id": "REL-000008",
+              "source": null
+            },
+            {
+              "confidence": 0.95,
+              "evidence_sentence": "生态合作伙伴 与 Beijing 之间存在「LOCATE」关系",
+              "record_id": "REL-000013",
+              "source": null
+            },
+            {
+              "confidence": 0.95,
+              "evidence_sentence": "生态合作伙伴 与 Beijing 之间存在「LOCATE」关系",
+              "record_id": "REL-000013",
+              "source": null
+            }
+          ],
+          "group_key": [
+            "生态合作伙伴",
+            "LOCATE",
+            "Beijing"
+          ],
+          "winner_confidence": 0.95,
+          "winner_id": "REL-000013"
+        },
+        {
+          "candidate_count": 3,
+          "candidates": [
+            {
+              "confidence": 0.8400000000000001,
+              "evidence_sentence": "生态合作伙伴 与 Shanghai 之间存在「LOCATE」关系",
+              "record_id": "REL-000009",
+              "source": null
+            },
+            {
+              "confidence": 0.78,
+              "evidence_sentence": "生态合作伙伴 与 Shanghai 之间存在「LOCATE」关系",
+              "record_id": "REL-000014",
+              "source": null
+            },
+            {
+              "confidence": 0.78,
+              "evidence_sentence": "生态合作伙伴 与 Shanghai 之间存在「LOCATE」关系",
+              "record_id": "REL-000014",
+              "source": null
+            }
+          ],
+          "group_key": [
+            "生态合作伙伴",
+            "LOCATE",
+            "Shanghai"
+          ],
+          "winner_confidence": 0.8400000000000001,
+          "winner_id": "REL-000009"
+        },
+        {
+          "candidate_count": 3,
+          "candidates": [
+            {
+              "confidence": 0.87,
+              "evidence_sentence": "生态合作伙伴 与 总部 之间存在「LOCATE」关系",
+              "record_id": "REL-000010",
+              "source": null
+            },
+            {
+              "confidence": 0.81,
+              "evidence_sentence": "生态合作伙伴 与 总部 之间存在「LOCATE」关系",
+              "record_id": "REL-000015",
+              "source": null
+            },
+            {
+              "confidence": 0.81,
+              "evidence_sentence": "生态合作伙伴 与 总部 之间存在「LOCATE」关系",
+              "record_id": "REL-000015",
+              "source": null
+            }
+          ],
+          "group_key": [
+            "生态合作伙伴",
+            "LOCATE",
+            "总部"
+          ],
+          "winner_confidence": 0.87,
+          "winner_id": "REL-000010"
+        },
+        {
+          "candidate_count": 3,
+          "candidates": [
+            {
+              "confidence": 0.9,
+              "evidence_sentence": "某科技集团 与 生态合作伙伴 之间存在「COLLABORATE」关系",
+              "record_id": "REL-000011",
+              "source": null
+            },
+            {
+              "confidence": 0.93,
+              "evidence_sentence": "某科技集团 与 生态合作伙伴 之间存在「COLLABORATE」关系",
+              "record_id": "REL-000019",
+              "source": null
+            },
+            {
+              "confidence": 0.93,
+              "evidence_sentence": "某科技集团 与 生态合作伙伴 之间存在「COLLABORATE」关系",
+              "record_id": "REL-000019",
+              "source": null
+            }
+          ],
+          "group_key": [
+            "某科技集团",
+            "COLLABORATE",
+            "生态合作伙伴"
+          ],
+          "winner_confidence": 0.93,
+          "winner_id": "REL-000019"
+        },
+        {
+          "candidate_count": 3,
+          "candidates": [
+            {
+              "confidence": 0.93,
+              "evidence_sentence": "生态合作伙伴 与 某科技集团 之间存在「COLLABORATE」关系",
+              "record_id": "REL-000012",
+              "source": null
+            },
+            {
+              "confidence": 0.95,
+              "evidence_sentence": "生态合作伙伴 与 某科技集团 之间存在「COLLABORATE」关系",
+              "record_id": "REL-000020",
+              "source": null
+            },
+            {
+              "confidence": 0.95,
+              "evidence_sentence": "生态合作伙伴 与 某科技集团 之间存在「COLLABORATE」关系",
+              "record_id": "REL-000020",
+              "source": null
+            }
+          ],
+          "group_key": [
+            "生态合作伙伴",
+            "COLLABORATE",
+            "某科技集团"
+          ],
+          "winner_confidence": 0.95,
+          "winner_id": "REL-000020"
+        },
+        {
+          "candidate_count": 3,
+          "candidates": [
+            {
+              "confidence": 0.95,
+              "evidence_sentence": "知识图谱 与 2024年 之间存在「OCCUR_AT」关系",
+              "record_id": "REL-000013",
+              "source": null
+            },
+            {
+              "confidence": 0.95,
+              "evidence_sentence": "知识图谱 与 2024年 之间存在「OCCUR_AT」关系",
+              "record_id": "REL-000027",
+              "source": null
+            },
+            {
+              "confidence": 0.9,
+              "evidence_sentence": "知识图谱 与 2024年 之间存在「OCCUR_AT」关系",
+              "record_id": "REL-000025",
+              "source": null
+            }
+          ],
+          "group_key": [
+            "知识图谱",
+            "OCCUR_AT",
+            "2024年"
+          ],
+          "winner_confidence": 0.95,
+          "winner_id": "REL-000013"
+        },
+        {
+          "candidate_count": 3,
+          "candidates": [
+            {
+              "confidence": 0.78,
+              "evidence_sentence": "信息抽取 与 2024年 之间存在「OCCUR_AT」关系",
+              "record_id": "REL-000014",
+              "source": null
+            },
+            {
+              "confidence": 0.93,
+              "evidence_sentence": "信息抽取 与 2024年 之间存在「OCCUR_AT」关系",
+              "record_id": "REL-000026",
+              "source": null
+            },
+            {
+              "confidence": 0.95,
+              "evidence_sentence": "信息抽取 与 2024年 之间存在「OCCUR_AT」关系",
+              "record_id": "REL-000027",
+              "source": null
+            }
+          ],
+          "group_key": [
+            "信息抽取",
+            "OCCUR_AT",
+            "2024年"
+          ],
+          "winner_confidence": 0.95,
+          "winner_id": "REL-000027"
+        },
+        {
+          "candidate_count": 3,
+          "candidates": [
+            {
+              "confidence": 0.81,
+              "evidence_sentence": "某科技集团 与 5亿元 之间存在「INVEST」关系",
+              "record_id": "REL-000015",
+              "source": null
+            },
+            {
+              "confidence": 0.95,
+              "evidence_sentence": "某科技集团 与 5亿元 之间存在「INVEST」关系",
+              "record_id": "REL-000034",
+              "source": null
+            },
+            {
+              "confidence": 0.95,
+              "evidence_sentence": "某科技集团 与 5亿元 之间存在「INVEST」关系",
+              "record_id": "REL-000034",
+              "source": null
+            }
+          ],
+          "group_key": [
+            "某科技集团",
+            "INVEST",
+            "5亿元"
+          ],
+          "winner_confidence": 0.95,
+          "winner_id": "REL-000034"
+        },
+        {
+          "candidate_count": 3,
+          "candidates": [
+            {
+              "confidence": 0.8400000000000001,
+              "evidence_sentence": "生态合作伙伴 与 5亿元 之间存在「INVEST」关系",
+              "record_id": "REL-000016",
+              "source": null
+            },
+            {
+              "confidence": 0.9,
+              "evidence_sentence": "生态合作伙伴 与 5亿元 之间存在「INVEST」关系",
+              "record_id": "REL-000032",
+              "source": null
+            },
+            {
+              "confidence": 0.8400000000000001,
+              "evidence_sentence": "生态合作伙伴 与 5亿元 之间存在「INVEST」关系",
+              "record_id": "REL-000037",
+              "source": null
+            }
+          ],
+          "group_key": [
+            "生态合作伙伴",
+            "INVEST",
+            "5亿元"
+          ],
+          "winner_confidence": 0.9,
+          "winner_id": "REL-000032"
+        },
+        {
+          "candidate_count": 4,
+          "candidates": [
+            {
+              "confidence": 0.81,
+              "evidence_sentence": "某科技集团 与 张三博士 之间存在「EMPLOY」关系",
+              "record_id": "REL-000001",
+              "source": null
+            },
+            {
+              "confidence": 0.87,
+              "evidence_sentence": "某科技集团 与 张三博士 之间存在「EMPLOY」关系",
+              "record_id": "REL-000003",
+              "source": null
+            },
+            {
+              "confidence": 0.87,
+              "evidence_sentence": "某科技集团 与 张三博士 之间存在「EMPLOY」关系",
+              "record_id": "REL-000003",
+              "source": null
+            },
+            {
+              "confidence": 0.87,
+              "evidence_sentence": "某科技集团 与 张三博士 之间存在「EMPLOY」关系",
+              "record_id": "REL-000003",
+              "source": null
+            }
+          ],
+          "group_key": [
+            "某科技集团",
+            "EMPLOY",
+            "张三博士"
+          ],
+          "winner_confidence": 0.87,
+          "winner_id": "REL-000003"
+        },
+        {
+          "candidate_count": 4,
+          "candidates": [
+            {
+              "confidence": 0.8400000000000001,
+              "evidence_sentence": "某科技集团 与 首席科学家 之间存在「EMPLOY」关系",
+              "record_id": "REL-000002",
+              "source": null
+            },
+            {
+              "confidence": 0.8400000000000001,
+              "evidence_sentence": "某科技集团 与 首席科学家 之间存在「EMPLOY」关系",
+              "record_id": "REL-000002",
+              "source": null
+            },
+            {
+              "confidence": 0.8400000000000001,
+              "evidence_sentence": "某科技集团 与 首席科学家 之间存在「EMPLOY」关系",
+              "record_id": "REL-000002",
+              "source": null
+            },
+            {
+              "confidence": 0.8400000000000001,
+              "evidence_sentence": "某科技集团 与 首席科学家 之间存在「EMPLOY」关系",
+              "record_id": "REL-000002",
+              "source": null
+            }
+          ],
+          "group_key": [
+            "某科技集团",
+            "EMPLOY",
+            "首席科学家"
+          ],
+          "winner_confidence": 0.8400000000000001,
+          "winner_id": "REL-000002"
+        },
+        {
+          "candidate_count": 4,
+          "candidates": [
+            {
+              "confidence": 0.87,
+              "evidence_sentence": "生态合作伙伴 与 张三博士 之间存在「EMPLOY」关系",
+              "record_id": "REL-000003",
+              "source": null
+            },
+            {
+              "confidence": 0.95,
+              "evidence_sentence": "生态合作伙伴 与 张三博士 之间存在「EMPLOY」关系",
+              "record_id": "REL-000006",
+              "source": null
+            },
+            {
+              "confidence": 0.95,
+              "evidence_sentence": "生态合作伙伴 与 张三博士 之间存在「EMPLOY」关系",
+              "record_id": "REL-000006",
+              "source": null
+            },
+            {
+              "confidence": 0.95,
+              "evidence_sentence": "生态合作伙伴 与 张三博士 之间存在「EMPLOY」关系",
+              "record_id": "REL-000006",
+              "source": null
+            }
+          ],
+          "group_key": [
+            "生态合作伙伴",
+            "EMPLOY",
+            "张三博士"
+          ],
+          "winner_confidence": 0.95,
+          "winner_id": "REL-000006"
+        },
+        {
+          "candidate_count": 4,
+          "candidates": [
+            {
+              "confidence": 0.9,
+              "evidence_sentence": "生态合作伙伴 与 首席科学家 之间存在「EMPLOY」关系",
+              "record_id": "REL-000004",
+              "source": null
+            },
+            {
+              "confidence": 0.93,
+              "evidence_sentence": "生态合作伙伴 与 首席科学家 之间存在「EMPLOY」关系",
+              "record_id": "REL-000005",
+              "source": null
+            },
+            {
+              "confidence": 0.93,
+              "evidence_sentence": "生态合作伙伴 与 首席科学家 之间存在「EMPLOY」关系",
+              "record_id": "REL-000005",
+              "source": null
+            },
+            {
+              "confidence": 0.93,
+              "evidence_sentence": "生态合作伙伴 与 首席科学家 之间存在「EMPLOY」关系",
+              "record_id": "REL-000005",
+              "source": null
+            }
+          ],
+          "group_key": [
+            "生态合作伙伴",
+            "EMPLOY",
+            "首席科学家"
+          ],
+          "winner_confidence": 0.93,
+          "winner_id": "REL-000005"
+        },
+        {
+          "candidate_count": 4,
+          "candidates": [
+            {
+              "confidence": 0.93,
+              "evidence_sentence": "某科技集团 与 Beijing 之间存在「LOCATE」关系",
+              "record_id": "REL-000005",
+              "source": null
+            },
+            {
+              "confidence": 0.87,
+              "evidence_sentence": "某科技集团 与 Beijing 之间存在「LOCATE」关系",
+              "record_id": "REL-000010",
+              "source": null
+            },
+            {
+              "confidence": 0.87,
+              "evidence_sentence": "某科技集团 与 Beijing 之间存在「LOCATE」关系",
+              "record_id": "REL-000010",
+              "source": null
+            },
+            {
+              "confidence": 0.87,
+              "evidence_sentence": "某科技集团 与 Beijing 之间存在「LOCATE」关系",
+              "record_id": "REL-000010",
+              "source": null
+            }
+          ],
+          "group_key": [
+            "某科技集团",
+            "LOCATE",
+            "Beijing"
+          ],
+          "winner_confidence": 0.93,
+          "winner_id": "REL-000005"
+        },
+        {
+          "candidate_count": 4,
+          "candidates": [
+            {
+              "confidence": 0.95,
+              "evidence_sentence": "某科技集团 与 Shanghai 之间存在「LOCATE」关系",
+              "record_id": "REL-000006",
+              "source": null
+            },
+            {
+              "confidence": 0.9,
+              "evidence_sentence": "某科技集团 与 Shanghai 之间存在「LOCATE」关系",
+              "record_id": "REL-000011",
+              "source": null
+            },
+            {
+              "confidence": 0.9,
+              "evidence_sentence": "某科技集团 与 Shanghai 之间存在「LOCATE」关系",
+              "record_id": "REL-000011",
+              "source": null
+            },
+            {
+              "confidence": 0.9,
+              "evidence_sentence": "某科技集团 与 Shanghai 之间存在「LOCATE」关系",
+              "record_id": "REL-000011",
+              "source": null
+            }
+          ],
+          "group_key": [
+            "某科技集团",
+            "LOCATE",
+            "Shanghai"
+          ],
+          "winner_confidence": 0.95,
+          "winner_id": "REL-000006"
+        },
+        {
+          "candidate_count": 4,
+          "candidates": [
+            {
+              "confidence": 0.78,
+              "evidence_sentence": "某科技集团 与 总部 之间存在「LOCATE」关系",
+              "record_id": "REL-000007",
+              "source": null
+            },
+            {
+              "confidence": 0.93,
+              "evidence_sentence": "某科技集团 与 总部 之间存在「LOCATE」关系",
+              "record_id": "REL-000012",
+              "source": null
+            },
+            {
+              "confidence": 0.93,
+              "evidence_sentence": "某科技集团 与 总部 之间存在「LOCATE」关系",
+              "record_id": "REL-000012",
+              "source": null
+            },
+            {
+              "confidence": 0.93,
+              "evidence_sentence": "某科技集团 与 总部 之间存在「LOCATE」关系",
+              "record_id": "REL-000012",
+              "source": null
+            }
+          ],
+          "group_key": [
+            "某科技集团",
+            "LOCATE",
+            "总部"
+          ],
+          "winner_confidence": 0.93,
+          "winner_id": "REL-000012"
+        },
+        {
+          "candidate_count": 4,
+          "candidates": [
+            {
+              "confidence": 0.81,
+              "evidence_sentence": "生态合作伙伴 与 Beijing 之间存在「LOCATE」关系",
+              "record_id": "REL-000008",
+              "source": null
+            },
+            {
+              "confidence": 0.95,
+              "evidence_sentence": "生态合作伙伴 与 Beijing 之间存在「LOCATE」关系",
+              "record_id": "REL-000013",
+              "source": null
+            },
+            {
+              "confidence": 0.95,
+              "evidence_sentence": "生态合作伙伴 与 Beijing 之间存在「LOCATE」关系",
+              "record_id": "REL-000013",
+              "source": null
+            },
+            {
+              "confidence": 0.95,
+              "evidence_sentence": "生态合作伙伴 与 Beijing 之间存在「LOCATE」关系",
+              "record_id": "REL-000013",
+              "source": null
+            }
+          ],
+          "group_key": [
+            "生态合作伙伴",
+            "LOCATE",
+            "Beijing"
+          ],
+          "winner_confidence": 0.95,
+          "winner_id": "REL-000013"
+        },
+        {
+          "candidate_count": 4,
+          "candidates": [
+            {
+              "confidence": 0.8400000000000001,
+              "evidence_sentence": "生态合作伙伴 与 Shanghai 之间存在「LOCATE」关系",
+              "record_id": "REL-000009",
+              "source": null
+            },
+            {
+              "confidence": 0.78,
+              "evidence_sentence": "生态合作伙伴 与 Shanghai 之间存在「LOCATE」关系",
+              "record_id": "REL-000014",
+              "source": null
+            },
+            {
+              "confidence": 0.78,
+              "evidence_sentence": "生态合作伙伴 与 Shanghai 之间存在「LOCATE」关系",
+              "record_id": "REL-000014",
+              "source": null
+            },
+            {
+              "confidence": 0.78,
+              "evidence_sentence": "生态合作伙伴 与 Shanghai 之间存在「LOCATE」关系",
+              "record_id": "REL-000014",
+              "source": null
+            }
+          ],
+          "group_key": [
+            "生态合作伙伴",
+            "LOCATE",
+            "Shanghai"
+          ],
+          "winner_confidence": 0.8400000000000001,
+          "winner_id": "REL-000009"
+        },
+        {
+          "candidate_count": 4,
+          "candidates": [
+            {
+              "confidence": 0.87,
+              "evidence_sentence": "生态合作伙伴 与 总部 之间存在「LOCATE」关系",
+              "record_id": "REL-000010",
+              "source": null
+            },
+            {
+              "confidence": 0.81,
+              "evidence_sentence": "生态合作伙伴 与 总部 之间存在「LOCATE」关系",
+              "record_id": "REL-000015",
+              "source": null
+            },
+            {
+              "confidence": 0.81,
+              "evidence_sentence": "生态合作伙伴 与 总部 之间存在「LOCATE」关系",
+              "record_id": "REL-000015",
+              "source": null
+            },
+            {
+              "confidence": 0.81,
+              "evidence_sentence": "生态合作伙伴 与 总部 之间存在「LOCATE」关系",
+              "record_id": "REL-000015",
+              "source": null
+            }
+          ],
+          "group_key": [
+            "生态合作伙伴",
+            "LOCATE",
+            "总部"
+          ],
+          "winner_confidence": 0.87,
+          "winner_id": "REL-000010"
+        },
+        {
+          "candidate_count": 4,
+          "candidates": [
+            {
+              "confidence": 0.9,
+              "evidence_sentence": "某科技集团 与 生态合作伙伴 之间存在「COLLABORATE」关系",
+              "record_id": "REL-000011",
+              "source": null
+            },
+            {
+              "confidence": 0.93,
+              "evidence_sentence": "某科技集团 与 生态合作伙伴 之间存在「COLLABORATE」关系",
+              "record_id": "REL-000019",
+              "source": null
+            },
+            {
+              "confidence": 0.93,
+              "evidence_sentence": "某科技集团 与 生态合作伙伴 之间存在「COLLABORATE」关系",
+              "record_id": "REL-000019",
+              "source": null
+            },
+            {
+              "confidence": 0.93,
+              "evidence_sentence": "某科技集团 与 生态合作伙伴 之间存在「COLLABORATE」关系",
+              "record_id": "REL-000019",
+              "source": null
+            }
+          ],
+          "group_key": [
+            "某科技集团",
+            "COLLABORATE",
+            "生态合作伙伴"
+          ],
+          "winner_confidence": 0.93,
+          "winner_id": "REL-000019"
+        },
+        {
+          "candidate_count": 4,
+          "candidates": [
+            {
+              "confidence": 0.93,
+              "evidence_sentence": "生态合作伙伴 与 某科技集团 之间存在「COLLABORATE」关系",
+              "record_id": "REL-000012",
+              "source": null
+            },
+            {
+              "confidence": 0.95,
+              "evidence_sentence": "生态合作伙伴 与 某科技集团 之间存在「COLLABORATE」关系",
+              "record_id": "REL-000020",
+              "source": null
+            },
+            {
+              "confidence": 0.95,
+              "evidence_sentence": "生态合作伙伴 与 某科技集团 之间存在「COLLABORATE」关系",
+              "record_id": "REL-000020",
+              "source": null
+            },
+            {
+              "confidence": 0.95,
+              "evidence_sentence": "生态合作伙伴 与 某科技集团 之间存在「COLLABORATE」关系",
+              "record_id": "REL-000020",
+              "source": null
+            }
+          ],
+          "group_key": [
+            "生态合作伙伴",
+            "COLLABORATE",
+            "某科技集团"
+          ],
+          "winner_confidence": 0.95,
+          "winner_id": "REL-000020"
+        },
+        {
+          "candidate_count": 4,
+          "candidates": [
+            {
+              "confidence": 0.95,
+              "evidence_sentence": "知识图谱 与 2024年 之间存在「OCCUR_AT」关系",
+              "record_id": "REL-000013",
+              "source": null
+            },
+            {
+              "confidence": 0.95,
+              "evidence_sentence": "知识图谱 与 2024年 之间存在「OCCUR_AT」关系",
+              "record_id": "REL-000027",
+              "source": null
+            },
+            {
+              "confidence": 0.9,
+              "evidence_sentence": "知识图谱 与 2024年 之间存在「OCCUR_AT」关系",
+              "record_id": "REL-000025",
+              "source": null
+            },
+            {
+              "confidence": 0.9,
+              "evidence_sentence": "知识图谱 与 2024年 之间存在「OCCUR_AT」关系",
+              "record_id": "REL-000025",
+              "source": null
+            }
+          ],
+          "group_key": [
+            "知识图谱",
+            "OCCUR_AT",
+            "2024年"
+          ],
+          "winner_confidence": 0.95,
+          "winner_id": "REL-000013"
+        },
+        {
+          "candidate_count": 4,
+          "candidates": [
+            {
+              "confidence": 0.78,
+              "evidence_sentence": "信息抽取 与 2024年 之间存在「OCCUR_AT」关系",
+              "record_id": "REL-000014",
+              "source": null
+            },
+            {
+              "confidence": 0.93,
+              "evidence_sentence": "信息抽取 与 2024年 之间存在「OCCUR_AT」关系",
+              "record_id": "REL-000026",
+              "source": null
+            },
+            {
+              "confidence": 0.95,
+              "evidence_sentence": "信息抽取 与 2024年 之间存在「OCCUR_AT」关系",
+              "record_id": "REL-000027",
+              "source": null
+            },
+            {
+              "confidence": 0.95,
+              "evidence_sentence": "信息抽取 与 2024年 之间存在「OCCUR_AT」关系",
+              "record_id": "REL-000027",
+              "source": null
+            }
+          ],
+          "group_key": [
+            "信息抽取",
+            "OCCUR_AT",
+            "2024年"
+          ],
+          "winner_confidence": 0.95,
+          "winner_id": "REL-000027"
+        },
+        {
+          "candidate_count": 4,
+          "candidates": [
+            {
+              "confidence": 0.81,
+              "evidence_sentence": "某科技集团 与 5亿元 之间存在「INVEST」关系",
+              "record_id": "REL-000015",
+              "source": null
+            },
+            {
+              "confidence": 0.95,
+              "evidence_sentence": "某科技集团 与 5亿元 之间存在「INVEST」关系",
+              "record_id": "REL-000034",
+              "source": null
+            },
+            {
+              "confidence": 0.95,
+              "evidence_sentence": "某科技集团 与 5亿元 之间存在「INVEST」关系",
+              "record_id": "REL-000034",
+              "source": null
+            },
+            {
+              "confidence": 0.95,
+              "evidence_sentence": "某科技集团 与 5亿元 之间存在「INVEST」关系",
+              "record_id": "REL-000034",
+              "source": null
+            }
+          ],
+          "group_key": [
+            "某科技集团",
+            "INVEST",
+            "5亿元"
+          ],
+          "winner_confidence": 0.95,
+          "winner_id": "REL-000034"
+        },
+        {
+          "candidate_count": 4,
+          "candidates": [
+            {
+              "confidence": 0.8400000000000001,
+              "evidence_sentence": "生态合作伙伴 与 5亿元 之间存在「INVEST」关系",
+              "record_id": "REL-000016",
+              "source": null
+            },
+            {
+              "confidence": 0.9,
+              "evidence_sentence": "生态合作伙伴 与 5亿元 之间存在「INVEST」关系",
+              "record_id": "REL-000032",
+              "source": null
+            },
+            {
+              "confidence": 0.8400000000000001,
+              "evidence_sentence": "生态合作伙伴 与 5亿元 之间存在「INVEST」关系",
+              "record_id": "REL-000037",
+              "source": null
+            },
+            {
+              "confidence": 0.8400000000000001,
+              "evidence_sentence": "生态合作伙伴 与 5亿元 之间存在「INVEST」关系",
+              "record_id": "REL-000037",
+              "source": null
+            }
+          ],
+          "group_key": [
+            "生态合作伙伴",
+            "INVEST",
+            "5亿元"
+          ],
+          "winner_confidence": 0.9,
+          "winner_id": "REL-000032"
+        },
+        {
+          "candidate_count": 4,
+          "candidates": [
+            {
+              "confidence": 0.81,
+              "evidence_sentence": "某科技集团 与 张三博士 之间存在「EMPLOY」关系",
+              "record_id": "REL-000001",
+              "source": null
+            },
+            {
+              "confidence": 0.87,
+              "evidence_sentence": "某科技集团 与 张三博士 之间存在「EMPLOY」关系",
+              "record_id": "REL-000003",
+              "source": null
+            },
+            {
+              "confidence": 0.87,
+              "evidence_sentence": "某科技集团 与 张三博士 之间存在「EMPLOY」关系",
+              "record_id": "REL-000003",
+              "source": null
+            },
+            {
+              "confidence": 0.87,
+              "evidence_sentence": "某科技集团 与 张三博士 之间存在「EMPLOY」关系",
+              "record_id": "REL-000003",
+              "source": null
+            }
+          ],
+          "group_key": [
+            "某科技集团",
+            "EMPLOY",
+            "张三博士"
+          ],
+          "winner_confidence": 0.87,
+          "winner_id": "REL-000003"
+        },
+        {
+          "candidate_count": 4,
+          "candidates": [
+            {
+              "confidence": 0.8400000000000001,
+              "evidence_sentence": "某科技集团 与 首席科学家 之间存在「EMPLOY」关系",
+              "record_id": "REL-000002",
+              "source": null
+            },
+            {
+              "confidence": 0.8400000000000001,
+              "evidence_sentence": "某科技集团 与 首席科学家 之间存在「EMPLOY」关系",
+              "record_id": "REL-000002",
+              "source": null
+            },
+            {
+              "confidence": 0.8400000000000001,
+              "evidence_sentence": "某科技集团 与 首席科学家 之间存在「EMPLOY」关系",
+              "record_id": "REL-000002",
+              "source": null
+            },
+            {
+              "confidence": 0.8400000000000001,
+              "evidence_sentence": "某科技集团 与 首席科学家 之间存在「EMPLOY」关系",
+              "record_id": "REL-000002",
+              "source": null
+            }
+          ],
+          "group_key": [
+            "某科技集团",
+            "EMPLOY",
+            "首席科学家"
+          ],
+          "winner_confidence": 0.8400000000000001,
+          "winner_id": "REL-000002"
+        },
+        {
+          "candidate_count": 4,
+          "candidates": [
+            {
+              "confidence": 0.87,
+              "evidence_sentence": "生态合作伙伴 与 张三博士 之间存在「EMPLOY」关系",
+              "record_id": "REL-000003",
+              "source": null
+            },
+            {
+              "confidence": 0.95,
+              "evidence_sentence": "生态合作伙伴 与 张三博士 之间存在「EMPLOY」关系",
+              "record_id": "REL-000006",
+              "source": null
+            },
+            {
+              "confidence": 0.95,
+              "evidence_sentence": "生态合作伙伴 与 张三博士 之间存在「EMPLOY」关系",
+              "record_id": "REL-000006",
+              "source": null
+            },
+            {
+              "confidence": 0.95,
+              "evidence_sentence": "生态合作伙伴 与 张三博士 之间存在「EMPLOY」关系",
+              "record_id": "REL-000006",
+              "source": null
+            }
+          ],
+          "group_key": [
+            "生态合作伙伴",
+            "EMPLOY",
+            "张三博士"
+          ],
+          "winner_confidence": 0.95,
+          "winner_id": "REL-000006"
+        },
+        {
+          "candidate_count": 4,
+          "candidates": [
+            {
+              "confidence": 0.9,
+              "evidence_sentence": "生态合作伙伴 与 首席科学家 之间存在「EMPLOY」关系",
+              "record_id": "REL-000004",
+              "source": null
+            },
+            {
+              "confidence": 0.93,
+              "evidence_sentence": "生态合作伙伴 与 首席科学家 之间存在「EMPLOY」关系",
+              "record_id": "REL-000005",
+              "source": null
+            },
+            {
+              "confidence": 0.93,
+              "evidence_sentence": "生态合作伙伴 与 首席科学家 之间存在「EMPLOY」关系",
+              "record_id": "REL-000005",
+              "source": null
+            },
+            {
+              "confidence": 0.93,
+              "evidence_sentence": "生态合作伙伴 与 首席科学家 之间存在「EMPLOY」关系",
+              "record_id": "REL-000005",
+              "source": null
+            }
+          ],
+          "group_key": [
+            "生态合作伙伴",
+            "EMPLOY",
+            "首席科学家"
+          ],
+          "winner_confidence": 0.93,
+          "winner_id": "REL-000005"
+        },
+        {
+          "candidate_count": 4,
+          "candidates": [
+            {
+              "confidence": 0.93,
+              "evidence_sentence": "某科技集团 与 Beijing 之间存在「LOCATE」关系",
+              "record_id": "REL-000005",
+              "source": null
+            },
+            {
+              "confidence": 0.87,
+              "evidence_sentence": "某科技集团 与 Beijing 之间存在「LOCATE」关系",
+              "record_id": "REL-000010",
+              "source": null
+            },
+            {
+              "confidence": 0.87,
+              "evidence_sentence": "某科技集团 与 Beijing 之间存在「LOCATE」关系",
+              "record_id": "REL-000010",
+              "source": null
+            },
+            {
+              "confidence": 0.87,
+              "evidence_sentence": "某科技集团 与 Beijing 之间存在「LOCATE」关系",
+              "record_id": "REL-000010",
+              "source": null
+            }
+          ],
+          "group_key": [
+            "某科技集团",
+            "LOCATE",
+            "Beijing"
+          ],
+          "winner_confidence": 0.93,
+          "winner_id": "REL-000005"
+        },
+        {
+          "candidate_count": 4,
+          "candidates": [
+            {
+              "confidence": 0.95,
+              "evidence_sentence": "某科技集团 与 Shanghai 之间存在「LOCATE」关系",
+              "record_id": "REL-000006",
+              "source": null
+            },
+            {
+              "confidence": 0.9,
+              "evidence_sentence": "某科技集团 与 Shanghai 之间存在「LOCATE」关系",
+              "record_id": "REL-000011",
+              "source": null
+            },
+            {
+              "confidence": 0.9,
+              "evidence_sentence": "某科技集团 与 Shanghai 之间存在「LOCATE」关系",
+              "record_id": "REL-000011",
+              "source": null
+            },
+            {
+              "confidence": 0.9,
+              "evidence_sentence": "某科技集团 与 Shanghai 之间存在「LOCATE」关系",
+              "record_id": "REL-000011",
+              "source": null
+            }
+          ],
+          "group_key": [
+            "某科技集团",
+            "LOCATE",
+            "Shanghai"
+          ],
+          "winner_confidence": 0.95,
+          "winner_id": "REL-000006"
+        },
+        {
+          "candidate_count": 4,
+          "candidates": [
+            {
+              "confidence": 0.78,
+              "evidence_sentence": "某科技集团 与 总部 之间存在「LOCATE」关系",
+              "record_id": "REL-000007",
+              "source": null
+            },
+            {
+              "confidence": 0.93,
+              "evidence_sentence": "某科技集团 与 总部 之间存在「LOCATE」关系",
+              "record_id": "REL-000012",
+              "source": null
+            },
+            {
+              "confidence": 0.93,
+              "evidence_sentence": "某科技集团 与 总部 之间存在「LOCATE」关系",
+              "record_id": "REL-000012",
+              "source": null
+            },
+            {
+              "confidence": 0.93,
+              "evidence_sentence": "某科技集团 与 总部 之间存在「LOCATE」关系",
+              "record_id": "REL-000012",
+              "source": null
+            }
+          ],
+          "group_key": [
+            "某科技集团",
+            "LOCATE",
+            "总部"
+          ],
+          "winner_confidence": 0.93,
+          "winner_id": "REL-000012"
+        },
+        {
+          "candidate_count": 4,
+          "candidates": [
+            {
+              "confidence": 0.81,
+              "evidence_sentence": "生态合作伙伴 与 Beijing 之间存在「LOCATE」关系",
+              "record_id": "REL-000008",
+              "source": null
+            },
+            {
+              "confidence": 0.95,
+              "evidence_sentence": "生态合作伙伴 与 Beijing 之间存在「LOCATE」关系",
+              "record_id": "REL-000013",
+              "source": null
+            },
+            {
+              "confidence": 0.95,
+              "evidence_sentence": "生态合作伙伴 与 Beijing 之间存在「LOCATE」关系",
+              "record_id": "REL-000013",
+              "source": null
+            },
+            {
+              "confidence": 0.95,
+              "evidence_sentence": "生态合作伙伴 与 Beijing 之间存在「LOCATE」关系",
+              "record_id": "REL-000013",
+              "source": null
+            }
+          ],
+          "group_key": [
+            "生态合作伙伴",
+            "LOCATE",
+            "Beijing"
+          ],
+          "winner_confidence": 0.95,
+          "winner_id": "REL-000013"
+        },
+        {
+          "candidate_count": 4,
+          "candidates": [
+            {
+              "confidence": 0.8400000000000001,
+              "evidence_sentence": "生态合作伙伴 与 Shanghai 之间存在「LOCATE」关系",
+              "record_id": "REL-000009",
+              "source": null
+            },
+            {
+              "confidence": 0.78,
+              "evidence_sentence": "生态合作伙伴 与 Shanghai 之间存在「LOCATE」关系",
+              "record_id": "REL-000014",
+              "source": null
+            },
+            {
+              "confidence": 0.78,
+              "evidence_sentence": "生态合作伙伴 与 Shanghai 之间存在「LOCATE」关系",
+              "record_id": "REL-000014",
+              "source": null
+            },
+            {
+              "confidence": 0.78,
+              "evidence_sentence": "生态合作伙伴 与 Shanghai 之间存在「LOCATE」关系",
+              "record_id": "REL-000014",
+              "source": null
+            }
+          ],
+          "group_key": [
+            "生态合作伙伴",
+            "LOCATE",
+            "Shanghai"
+          ],
+          "winner_confidence": 0.8400000000000001,
+          "winner_id": "REL-000009"
+        },
+        {
+          "candidate_count": 4,
+          "candidates": [
+            {
+              "confidence": 0.87,
+              "evidence_sentence": "生态合作伙伴 与 总部 之间存在「LOCATE」关系",
+              "record_id": "REL-000010",
+              "source": null
+            },
+            {
+              "confidence": 0.81,
+              "evidence_sentence": "生态合作伙伴 与 总部 之间存在「LOCATE」关系",
+              "record_id": "REL-000015",
+              "source": null
+            },
+            {
+              "confidence": 0.81,
+              "evidence_sentence": "生态合作伙伴 与 总部 之间存在「LOCATE」关系",
+              "record_id": "REL-000015",
+              "source": null
+            },
+            {
+              "confidence": 0.81,
+              "evidence_sentence": "生态合作伙伴 与 总部 之间存在「LOCATE」关系",
+              "record_id": "REL-000015",
+              "source": null
+            }
+          ],
+          "group_key": [
+            "生态合作伙伴",
+            "LOCATE",
+            "总部"
+          ],
+          "winner_confidence": 0.87,
+          "winner_id": "REL-000010"
+        },
+        {
+          "candidate_count": 4,
+          "candidates": [
+            {
+              "confidence": 0.9,
+              "evidence_sentence": "某科技集团 与 生态合作伙伴 之间存在「COLLABORATE」关系",
+              "record_id": "REL-000011",
+              "source": null
+            },
+            {
+              "confidence": 0.93,
+              "evidence_sentence": "某科技集团 与 生态合作伙伴 之间存在「COLLABORATE」关系",
+              "record_id": "REL-000019",
+              "source": null
+            },
+            {
+              "confidence": 0.93,
+              "evidence_sentence": "某科技集团 与 生态合作伙伴 之间存在「COLLABORATE」关系",
+              "record_id": "REL-000019",
+              "source": null
+            },
+            {
+              "confidence": 0.93,
+              "evidence_sentence": "某科技集团 与 生态合作伙伴 之间存在「COLLABORATE」关系",
+              "record_id": "REL-000019",
+              "source": null
+            }
+          ],
+          "group_key": [
+            "某科技集团",
+            "COLLABORATE",
+            "生态合作伙伴"
+          ],
+          "winner_confidence": 0.93,
+          "winner_id": "REL-000019"
+        },
+        {
+          "candidate_count": 4,
+          "candidates": [
+            {
+              "confidence": 0.93,
+              "evidence_sentence": "生态合作伙伴 与 某科技集团 之间存在「COLLABORATE」关系",
+              "record_id": "REL-000012",
+              "source": null
+            },
+            {
+              "confidence": 0.95,
+              "evidence_sentence": "生态合作伙伴 与 某科技集团 之间存在「COLLABORATE」关系",
+              "record_id": "REL-000020",
+              "source": null
+            },
+            {
+              "confidence": 0.95,
+              "evidence_sentence": "生态合作伙伴 与 某科技集团 之间存在「COLLABORATE」关系",
+              "record_id": "REL-000020",
+              "source": null
+            },
+            {
+              "confidence": 0.95,
+              "evidence_sentence": "生态合作伙伴 与 某科技集团 之间存在「COLLABORATE」关系",
+              "record_id": "REL-000020",
+              "source": null
+            }
+          ],
+          "group_key": [
+            "生态合作伙伴",
+            "COLLABORATE",
+            "某科技集团"
+          ],
+          "winner_confidence": 0.95,
+          "winner_id": "REL-000020"
+        },
+        {
+          "candidate_count": 4,
+          "candidates": [
+            {
+              "confidence": 0.95,
+              "evidence_sentence": "知识图谱 与 2024年 之间存在「OCCUR_AT」关系",
+              "record_id": "REL-000013",
+              "source": null
+            },
+            {
+              "confidence": 0.95,
+              "evidence_sentence": "知识图谱 与 2024年 之间存在「OCCUR_AT」关系",
+              "record_id": "REL-000027",
+              "source": null
+            },
+            {
+              "confidence": 0.9,
+              "evidence_sentence": "知识图谱 与 2024年 之间存在「OCCUR_AT」关系",
+              "record_id": "REL-000025",
+              "source": null
+            },
+            {
+              "confidence": 0.9,
+              "evidence_sentence": "知识图谱 与 2024年 之间存在「OCCUR_AT」关系",
+              "record_id": "REL-000025",
+              "source": null
+            }
+          ],
+          "group_key": [
+            "知识图谱",
+            "OCCUR_AT",
+            "2024年"
+          ],
+          "winner_confidence": 0.95,
+          "winner_id": "REL-000013"
+        },
+        {
+          "candidate_count": 4,
+          "candidates": [
+            {
+              "confidence": 0.78,
+              "evidence_sentence": "信息抽取 与 2024年 之间存在「OCCUR_AT」关系",
+              "record_id": "REL-000014",
+              "source": null
+            },
+            {
+              "confidence": 0.93,
+              "evidence_sentence": "信息抽取 与 2024年 之间存在「OCCUR_AT」关系",
+              "record_id": "REL-000026",
+              "source": null
+            },
+            {
+              "confidence": 0.95,
+              "evidence_sentence": "信息抽取 与 2024年 之间存在「OCCUR_AT」关系",
+              "record_id": "REL-000027",
+              "source": null
+            },
+            {
+              "confidence": 0.95,
+              "evidence_sentence": "信息抽取 与 2024年 之间存在「OCCUR_AT」关系",
+              "record_id": "REL-000027",
+              "source": null
+            }
+          ],
+          "group_key": [
+            "信息抽取",
+            "OCCUR_AT",
+            "2024年"
+          ],
+          "winner_confidence": 0.95,
+          "winner_id": "REL-000027"
+        },
+        {
+          "candidate_count": 4,
+          "candidates": [
+            {
+              "confidence": 0.81,
+              "evidence_sentence": "某科技集团 与 5亿元 之间存在「INVEST」关系",
+              "record_id": "REL-000015",
+              "source": null
+            },
+            {
+              "confidence": 0.95,
+              "evidence_sentence": "某科技集团 与 5亿元 之间存在「INVEST」关系",
+              "record_id": "REL-000034",
+              "source": null
+            },
+            {
+              "confidence": 0.95,
+              "evidence_sentence": "某科技集团 与 5亿元 之间存在「INVEST」关系",
+              "record_id": "REL-000034",
+              "source": null
+            },
+            {
+              "confidence": 0.95,
+              "evidence_sentence": "某科技集团 与 5亿元 之间存在「INVEST」关系",
+              "record_id": "REL-000034",
+              "source": null
+            }
+          ],
+          "group_key": [
+            "某科技集团",
+            "INVEST",
+            "5亿元"
+          ],
+          "winner_confidence": 0.95,
+          "winner_id": "REL-000034"
+        },
+        {
+          "candidate_count": 4,
+          "candidates": [
+            {
+              "confidence": 0.8400000000000001,
+              "evidence_sentence": "生态合作伙伴 与 5亿元 之间存在「INVEST」关系",
+              "record_id": "REL-000016",
+              "source": null
+            },
+            {
+              "confidence": 0.9,
+              "evidence_sentence": "生态合作伙伴 与 5亿元 之间存在「INVEST」关系",
+              "record_id": "REL-000032",
+              "source": null
+            },
+            {
+              "confidence": 0.8400000000000001,
+              "evidence_sentence": "生态合作伙伴 与 5亿元 之间存在「INVEST」关系",
+              "record_id": "REL-000037",
+              "source": null
+            },
+            {
+              "confidence": 0.8400000000000001,
+              "evidence_sentence": "生态合作伙伴 与 5亿元 之间存在「INVEST」关系",
+              "record_id": "REL-000037",
+              "source": null
+            }
+          ],
+          "group_key": [
+            "生态合作伙伴",
+            "INVEST",
+            "5亿元"
+          ],
+          "winner_confidence": 0.9,
+          "winner_id": "REL-000032"
+        }
+      ],
+      "graph_file": [
+        {
+          "confidence": 0.81,
+          "graph_version": "v1.0",
+          "head": "某科技集团",
+          "relation": "EMPLOY",
+          "source": "DOC-FULL_parsed",
+          "tail": "张三博士",
+          "triple_id": "TRIPLE-REL-000001"
+        },
+        {
+          "confidence": 0.8400000000000001,
+          "graph_version": "v1.0",
+          "head": "某科技集团",
+          "relation": "EMPLOY",
+          "source": "DOC-FULL_parsed",
+          "tail": "首席科学家",
+          "triple_id": "TRIPLE-REL-000002"
+        },
+        {
+          "confidence": 0.87,
+          "graph_version": "v1.0",
+          "head": "生态合作伙伴",
+          "relation": "EMPLOY",
+          "source": "DOC-FULL_parsed",
+          "tail": "张三博士",
+          "triple_id": "TRIPLE-REL-000003"
+        },
+        {
+          "confidence": 0.9,
+          "graph_version": "v1.0",
+          "head": "生态合作伙伴",
+          "relation": "EMPLOY",
+          "source": "DOC-FULL_parsed",
+          "tail": "首席科学家",
+          "triple_id": "TRIPLE-REL-000004"
+        },
+        {
+          "confidence": 0.93,
+          "graph_version": "v1.0",
+          "head": "某科技集团",
+          "relation": "LOCATE",
+          "source": "DOC-FULL_parsed",
+          "tail": "Beijing",
+          "triple_id": "TRIPLE-REL-000005"
+        },
+        {
+          "confidence": 0.95,
+          "graph_version": "v1.0",
+          "head": "某科技集团",
+          "relation": "LOCATE",
+          "source": "DOC-FULL_parsed",
+          "tail": "Shanghai",
+          "triple_id": "TRIPLE-REL-000006"
+        },
+        {
+          "confidence": 0.78,
+          "graph_version": "v1.0",
+          "head": "某科技集团",
+          "relation": "LOCATE",
+          "source": "DOC-FULL_parsed",
+          "tail": "总部",
+          "triple_id": "TRIPLE-REL-000007"
+        },
+        {
+          "confidence": 0.81,
+          "graph_version": "v1.0",
+          "head": "生态合作伙伴",
+          "relation": "LOCATE",
+          "source": "DOC-FULL_parsed",
+          "tail": "Beijing",
+          "triple_id": "TRIPLE-REL-000008"
+        },
+        {
+          "confidence": 0.8400000000000001,
+          "graph_version": "v1.0",
+          "head": "生态合作伙伴",
+          "relation": "LOCATE",
+          "source": "DOC-FULL_parsed",
+          "tail": "Shanghai",
+          "triple_id": "TRIPLE-REL-000009"
+        },
+        {
+          "confidence": 0.87,
+          "graph_version": "v1.0",
+          "head": "生态合作伙伴",
+          "relation": "LOCATE",
+          "source": "DOC-FULL_parsed",
+          "tail": "总部",
+          "triple_id": "TRIPLE-REL-000010"
+        },
+        {
+          "confidence": 0.9,
+          "graph_version": "v1.0",
+          "head": "某科技集团",
+          "relation": "COLLABORATE",
+          "source": "DOC-FULL_parsed",
+          "tail": "生态合作伙伴",
+          "triple_id": "TRIPLE-REL-000011"
+        },
+        {
+          "confidence": 0.93,
+          "graph_version": "v1.0",
+          "head": "生态合作伙伴",
+          "relation": "COLLABORATE",
+          "source": "DOC-FULL_parsed",
+          "tail": "某科技集团",
+          "triple_id": "TRIPLE-REL-000012"
+        },
+        {
+          "confidence": 0.95,
+          "graph_version": "v1.0",
+          "head": "知识图谱",
+          "relation": "OCCUR_AT",
+          "source": "DOC-FULL_parsed",
+          "tail": "2024年",
+          "triple_id": "TRIPLE-REL-000013"
+        },
+        {
+          "confidence": 0.78,
+          "graph_version": "v1.0",
+          "head": "信息抽取",
+          "relation": "OCCUR_AT",
+          "source": "DOC-FULL_parsed",
+          "tail": "2024年",
+          "triple_id": "TRIPLE-REL-000014"
+        },
+        {
+          "confidence": 0.81,
+          "graph_version": "v1.0",
+          "head": "某科技集团",
+          "relation": "INVEST",
+          "source": "DOC-FULL_parsed",
+          "tail": "5亿元",
+          "triple_id": "TRIPLE-REL-000015"
+        },
+        {
+          "confidence": 0.8400000000000001,
+          "graph_version": "v1.0",
+          "head": "生态合作伙伴",
+          "relation": "INVEST",
+          "source": "DOC-FULL_parsed",
+          "tail": "5亿元",
+          "triple_id": "TRIPLE-REL-000016"
+        },
+        {
+          "confidence": 0.8400000000000001,
+          "graph_version": "v1.0",
+          "head": "某科技集团",
+          "relation": "EMPLOY",
+          "source": "DOC-FULL_parsed",
+          "tail": "首席科学家",
+          "triple_id": "TRIPLE-REL-000002"
+        },
+        {
+          "confidence": 0.87,
+          "graph_version": "v1.0",
+          "head": "某科技集团",
+          "relation": "EMPLOY",
+          "source": "DOC-FULL_parsed",
+          "tail": "张三博士",
+          "triple_id": "TRIPLE-REL-000003"
+        },
+        {
+          "confidence": 0.93,
+          "graph_version": "v1.0",
+          "head": "生态合作伙伴",
+          "relation": "EMPLOY",
+          "source": "DOC-FULL_parsed",
+          "tail": "首席科学家",
+          "triple_id": "TRIPLE-REL-000005"
+        },
+        {
+          "confidence": 0.93,
+          "graph_version": "v1.0",
+          "head": "某科技集团",
+          "relation": "LOCATE",
+          "source": "DOC-FULL_parsed",
+          "tail": "Beijing",
+          "triple_id": "TRIPLE-REL-000005"
+        },
+        {
+          "confidence": 0.95,
+          "graph_version": "v1.0",
+          "head": "生态合作伙伴",
+          "relation": "EMPLOY",
+          "source": "DOC-FULL_parsed",
+          "tail": "张三博士",
+          "triple_id": "TRIPLE-REL-000006"
+        },
+        {
+          "confidence": 0.95,
+          "graph_version": "v1.0",
+          "head": "某科技集团",
+          "relation": "LOCATE",
+          "source": "DOC-FULL_parsed",
+          "tail": "Shanghai",
+          "triple_id": "TRIPLE-REL-000006"
+        },
+        {
+          "confidence": 0.8400000000000001,
+          "graph_version": "v1.0",
+          "head": "生态合作伙伴",
+          "relation": "LOCATE",
+          "source": "DOC-FULL_parsed",
+          "tail": "Shanghai",
+          "triple_id": "TRIPLE-REL-000009"
+        },
+        {
+          "confidence": 0.87,
+          "graph_version": "v1.0",
+          "head": "生态合作伙伴",
+          "relation": "LOCATE",
+          "source": "DOC-FULL_parsed",
+          "tail": "总部",
+          "triple_id": "TRIPLE-REL-000010"
+        },
+        {
+          "confidence": 0.93,
+          "graph_version": "v1.0",
+          "head": "某科技集团",
+          "relation": "LOCATE",
+          "source": "DOC-FULL_parsed",
+          "tail": "总部",
+          "triple_id": "TRIPLE-REL-000012"
+        },
+        {
+          "confidence": 0.95,
+          "graph_version": "v1.0",
+          "head": "生态合作伙伴",
+          "relation": "LOCATE",
+          "source": "DOC-FULL_parsed",
+          "tail": "Beijing",
+          "triple_id": "TRIPLE-REL-000013"
+        },
+        {
+          "confidence": 0.95,
+          "graph_version": "v1.0",
+          "head": "知识图谱",
+          "relation": "OCCUR_AT",
+          "source": "DOC-FULL_parsed",
+          "tail": "2024年",
+          "triple_id": "TRIPLE-REL-000013"
+        },
+        {
+          "confidence": 0.93,
+          "graph_version": "v1.0",
+          "head": "某科技集团",
+          "relation": "COLLABORATE",
+          "source": "DOC-FULL_parsed",
+          "tail": "生态合作伙伴",
+          "triple_id": "TRIPLE-REL-000019"
+        },
+        {
+          "confidence": 0.95,
+          "graph_version": "v1.0",
+          "head": "生态合作伙伴",
+          "relation": "COLLABORATE",
+          "source": "DOC-FULL_parsed",
+          "tail": "某科技集团",
+          "triple_id": "TRIPLE-REL-000020"
+        },
+        {
+          "confidence": 0.93,
+          "graph_version": "v1.0",
+          "head": "信息抽取",
+          "relation": "OCCUR_AT",
+          "source": "DOC-FULL_parsed",
+          "tail": "2024年",
+          "triple_id": "TRIPLE-REL-000026"
+        },
+        {
+          "confidence": 0.9,
+          "graph_version": "v1.0",
+          "head": "生态合作伙伴",
+          "relation": "INVEST",
+          "source": "DOC-FULL_parsed",
+          "tail": "5亿元",
+          "triple_id": "TRIPLE-REL-000032"
+        },
+        {
+          "confidence": 0.95,
+          "graph_version": "v1.0",
+          "head": "某科技集团",
+          "relation": "INVEST",
+          "source": "DOC-FULL_parsed",
+          "tail": "5亿元",
+          "triple_id": "TRIPLE-REL-000034"
+        },
+        {
+          "confidence": 0.8400000000000001,
+          "graph_version": "v1.0",
+          "head": "某科技集团",
+          "relation": "EMPLOY",
+          "source": "DOC-FULL_parsed",
+          "tail": "首席科学家",
+          "triple_id": "TRIPLE-REL-000002"
+        },
+        {
+          "confidence": 0.87,
+          "graph_version": "v1.0",
+          "head": "某科技集团",
+          "relation": "EMPLOY",
+          "source": "DOC-FULL_parsed",
+          "tail": "张三博士",
+          "triple_id": "TRIPLE-REL-000003"
+        },
+        {
+          "confidence": 0.93,
+          "graph_version": "v1.0",
+          "head": "生态合作伙伴",
+          "relation": "EMPLOY",
+          "source": "DOC-FULL_parsed",
+          "tail": "首席科学家",
+          "triple_id": "TRIPLE-REL-000005"
+        },
+        {
+          "confidence": 0.93,
+          "graph_version": "v1.0",
+          "head": "某科技集团",
+          "relation": "LOCATE",
+          "source": "DOC-FULL_parsed",
+          "tail": "Beijing",
+          "triple_id": "TRIPLE-REL-000005"
+        },
+        {
+          "confidence": 0.95,
+          "graph_version": "v1.0",
+          "head": "生态合作伙伴",
+          "relation": "EMPLOY",
+          "source": "DOC-FULL_parsed",
+          "tail": "张三博士",
+          "triple_id": "TRIPLE-REL-000006"
+        },
+        {
+          "confidence": 0.95,
+          "graph_version": "v1.0",
+          "head": "某科技集团",
+          "relation": "LOCATE",
+          "source": "DOC-FULL_parsed",
+          "tail": "Shanghai",
+          "triple_id": "TRIPLE-REL-000006"
+        },
+        {
+          "confidence": 0.8400000000000001,
+          "graph_version": "v1.0",
+          "head": "生态合作伙伴",
+          "relation": "LOCATE",
+          "source": "DOC-FULL_parsed",
+          "tail": "Shanghai",
+          "triple_id": "TRIPLE-REL-000009"
+        },
+        {
+          "confidence": 0.87,
+          "graph_version": "v1.0",
+          "head": "生态合作伙伴",
+          "relation": "LOCATE",
+          "source": "DOC-FULL_parsed",
+          "tail": "总部",
+          "triple_id": "TRIPLE-REL-000010"
+        },
+        {
+          "confidence": 0.93,
+          "graph_version": "v1.0",
+          "head": "某科技集团",
+          "relation": "LOCATE",
+          "source": "DOC-FULL_parsed",
+          "tail": "总部",
+          "triple_id": "TRIPLE-REL-000012"
+        },
+        {
+          "confidence": 0.95,
+          "graph_version": "v1.0",
+          "head": "生态合作伙伴",
+          "relation": "LOCATE",
+          "source": "DOC-FULL_parsed",
+          "tail": "Beijing",
+          "triple_id": "TRIPLE-REL-000013"
+        },
+        {
+          "confidence": 0.95,
+          "graph_version": "v1.0",
+          "head": "知识图谱",
+          "relation": "OCCUR_AT",
+          "source": "DOC-FULL_parsed",
+          "tail": "2024年",
+          "triple_id": "TRIPLE-REL-000013"
+        },
+        {
+          "confidence": 0.93,
+          "graph_version": "v1.0",
+          "head": "某科技集团",
+          "relation": "COLLABORATE",
+          "source": "DOC-FULL_parsed",
+          "tail": "生态合作伙伴",
+          "triple_id": "TRIPLE-REL-000019"
+        },
+        {
+          "confidence": 0.95,
+          "graph_version": "v1.0",
+          "head": "生态合作伙伴",
+          "relation": "COLLABORATE",
+          "source": "DOC-FULL_parsed",
+          "tail": "某科技集团",
+          "triple_id": "TRIPLE-REL-000020"
+        },
+        {
+          "confidence": 0.95,
+          "graph_version": "v1.0",
+          "head": "信息抽取",
+          "relation": "OCCUR_AT",
+          "source": "DOC-FULL_parsed",
+          "tail": "2024年",
+          "triple_id": "TRIPLE-REL-000027"
+        },
+        {
+          "confidence": 0.9,
+          "graph_version": "v1.0",
+          "head": "生态合作伙伴",
+          "relation": "INVEST",
+          "source": "DOC-FULL_parsed",
+          "tail": "5亿元",
+          "triple_id": "TRIPLE-REL-000032"
+        },
+        {
+          "confidence": 0.95,
+          "graph_version": "v1.0",
+          "head": "某科技集团",
+          "relation": "INVEST",
+          "source": "DOC-FULL_parsed",
+          "tail": "5亿元",
+          "triple_id": "TRIPLE-REL-000034"
+        },
+        {
+          "confidence": 0.8400000000000001,
+          "graph_version": "v1.0",
+          "head": "某科技集团",
+          "relation": "EMPLOY",
+          "source": "DOC-FULL_parsed",
+          "tail": "首席科学家",
+          "triple_id": "TRIPLE-REL-000002"
+        },
+        {
+          "confidence": 0.87,
+          "graph_version": "v1.0",
+          "head": "某科技集团",
+          "relation": "EMPLOY",
+          "source": "DOC-FULL_parsed",
+          "tail": "张三博士",
+          "triple_id": "TRIPLE-REL-000003"
+        },
+        {
+          "confidence": 0.93,
+          "graph_version": "v1.0",
+          "head": "生态合作伙伴",
+          "relation": "EMPLOY",
+          "source": "DOC-FULL_parsed",
+          "tail": "首席科学家",
+          "triple_id": "TRIPLE-REL-000005"
+        },
+        {
+          "confidence": 0.93,
+          "graph_version": "v1.0",
+          "head": "某科技集团",
+          "relation": "LOCATE",
+          "source": "DOC-FULL_parsed",
+          "tail": "Beijing",
+          "triple_id": "TRIPLE-REL-000005"
+        },
+        {
+          "confidence": 0.95,
+          "graph_version": "v1.0",
+          "head": "生态合作伙伴",
+          "relation": "EMPLOY",
+          "source": "DOC-FULL_parsed",
+          "tail": "张三博士",
+          "triple_id": "TRIPLE-REL-000006"
+        },
+        {
+          "confidence": 0.95,
+          "graph_version": "v1.0",
+          "head": "某科技集团",
+          "relation": "LOCATE",
+          "source": "DOC-FULL_parsed",
+          "tail": "Shanghai",
+          "triple_id": "TRIPLE-REL-000006"
+        },
+        {
+          "confidence": 0.8400000000000001,
+          "graph_version": "v1.0",
+          "head": "生态合作伙伴",
+          "relation": "LOCATE",
+          "source": "DOC-FULL_parsed",
+          "tail": "Shanghai",
+          "triple_id": "TRIPLE-REL-000009"
+        },
+        {
+          "confidence": 0.87,
+          "graph_version": "v1.0",
+          "head": "生态合作伙伴",
+          "relation": "LOCATE",
+          "source": "DOC-FULL_parsed",
+          "tail": "总部",
+          "triple_id": "TRIPLE-REL-000010"
+        },
+        {
+          "confidence": 0.93,
+          "graph_version": "v1.0",
+          "head": "某科技集团",
+          "relation": "LOCATE",
+          "source": "DOC-FULL_parsed",
+          "tail": "总部",
+          "triple_id": "TRIPLE-REL-000012"
+        },
+        {
+          "confidence": 0.95,
+          "graph_version": "v1.0",
+          "head": "生态合作伙伴",
+          "relation": "LOCATE",
+          "source": "DOC-FULL_parsed",
+          "tail": "Beijing",
+          "triple_id": "TRIPLE-REL-000013"
+        },
+        {
+          "confidence": 0.95,
+          "graph_version": "v1.0",
+          "head": "知识图谱",
+          "relation": "OCCUR_AT",
+          "source": "DOC-FULL_parsed",
+          "tail": "2024年",
+          "triple_id": "TRIPLE-REL-000013"
+        },
+        {
+          "confidence": 0.93,
+          "graph_version": "v1.0",
+          "head": "某科技集团",
+          "relation": "COLLABORATE",
+          "source": "DOC-FULL_parsed",
+          "tail": "生态合作伙伴",
+          "triple_id": "TRIPLE-REL-000019"
+        },
+        {
+          "confidence": 0.95,
+          "graph_version": "v1.0",
+          "head": "生态合作伙伴",
+          "relation": "COLLABORATE",
+          "source": "DOC-FULL_parsed",
+          "tail": "某科技集团",
+          "triple_id": "TRIPLE-REL-000020"
+        },
+        {
+          "confidence": 0.95,
+          "graph_version": "v1.0",
+          "head": "信息抽取",
+          "relation": "OCCUR_AT",
+          "source": "DOC-FULL_parsed",
+          "tail": "2024年",
+          "triple_id": "TRIPLE-REL-000027"
+        },
+        {
+          "confidence": 0.9,
+          "graph_version": "v1.0",
+          "head": "生态合作伙伴",
+          "relation": "INVEST",
+          "source": "DOC-FULL_parsed",
+          "tail": "5亿元",
+          "triple_id": "TRIPLE-REL-000032"
+        },
+        {
+          "confidence": 0.95,
+          "graph_version": "v1.0",
+          "head": "某科技集团",
+          "relation": "INVEST",
+          "source": "DOC-FULL_parsed",
+          "tail": "5亿元",
+          "triple_id": "TRIPLE-REL-000034"
+        },
+        {
+          "confidence": 0.8400000000000001,
+          "graph_version": "v1.0",
+          "head": "某科技集团",
+          "relation": "EMPLOY",
+          "source": "DOC-FULL_parsed",
+          "tail": "首席科学家",
+          "triple_id": "TRIPLE-REL-000002"
+        },
+        {
+          "confidence": 0.87,
+          "graph_version": "v1.0",
+          "head": "某科技集团",
+          "relation": "EMPLOY",
+          "source": "DOC-FULL_parsed",
+          "tail": "张三博士",
+          "triple_id": "TRIPLE-REL-000003"
+        },
+        {
+          "confidence": 0.93,
+          "graph_version": "v1.0",
+          "head": "生态合作伙伴",
+          "relation": "EMPLOY",
+          "source": "DOC-FULL_parsed",
+          "tail": "首席科学家",
+          "triple_id": "TRIPLE-REL-000005"
+        },
+        {
+          "confidence": 0.93,
+          "graph_version": "v1.0",
+          "head": "某科技集团",
+          "relation": "LOCATE",
+          "source": "DOC-FULL_parsed",
+          "tail": "Beijing",
+          "triple_id": "TRIPLE-REL-000005"
+        },
+        {
+          "confidence": 0.95,
+          "graph_version": "v1.0",
+          "head": "生态合作伙伴",
+          "relation": "EMPLOY",
+          "source": "DOC-FULL_parsed",
+          "tail": "张三博士",
+          "triple_id": "TRIPLE-REL-000006"
+        },
+        {
+          "confidence": 0.95,
+          "graph_version": "v1.0",
+          "head": "某科技集团",
+          "relation": "LOCATE",
+          "source": "DOC-FULL_parsed",
+          "tail": "Shanghai",
+          "triple_id": "TRIPLE-REL-000006"
+        },
+        {
+          "confidence": 0.8400000000000001,
+          "graph_version": "v1.0",
+          "head": "生态合作伙伴",
+          "relation": "LOCATE",
+          "source": "DOC-FULL_parsed",
+          "tail": "Shanghai",
+          "triple_id": "TRIPLE-REL-000009"
+        },
+        {
+          "confidence": 0.87,
+          "graph_version": "v1.0",
+          "head": "生态合作伙伴",
+          "relation": "LOCATE",
+          "source": "DOC-FULL_parsed",
+          "tail": "总部",
+          "triple_id": "TRIPLE-REL-000010"
+        },
+        {
+          "confidence": 0.93,
+          "graph_version": "v1.0",
+          "head": "某科技集团",
+          "relation": "LOCATE",
+          "source": "DOC-FULL_parsed",
+          "tail": "总部",
+          "triple_id": "TRIPLE-REL-000012"
+        },
+        {
+          "confidence": 0.95,
+          "graph_version": "v1.0",
+          "head": "生态合作伙伴",
+          "relation": "LOCATE",
+          "source": "DOC-FULL_parsed",
+          "tail": "Beijing",
+          "triple_id": "TRIPLE-REL-000013"
+        },
+        {
+          "confidence": 0.95,
+          "graph_version": "v1.0",
+          "head": "知识图谱",
+          "relation": "OCCUR_AT",
+          "source": "DOC-FULL_parsed",
+          "tail": "2024年",
+          "triple_id": "TRIPLE-REL-000013"
+        },
+        {
+          "confidence": 0.93,
+          "graph_version": "v1.0",
+          "head": "某科技集团",
+          "relation": "COLLABORATE",
+          "source": "DOC-FULL_parsed",
+          "tail": "生态合作伙伴",
+          "triple_id": "TRIPLE-REL-000019"
+        },
+        {
+          "confidence": 0.95,
+          "graph_version": "v1.0",
+          "head": "生态合作伙伴",
+          "relation": "COLLABORATE",
+          "source": "DOC-FULL_parsed",
+          "tail": "某科技集团",
+          "triple_id": "TRIPLE-REL-000020"
+        },
+        {
+          "confidence": 0.95,
+          "graph_version": "v1.0",
+          "head": "信息抽取",
+          "relation": "OCCUR_AT",
+          "source": "DOC-FULL_parsed",
+          "tail": "2024年",
+          "triple_id": "TRIPLE-REL-000027"
+        },
+        {
+          "confidence": 0.9,
+          "graph_version": "v1.0",
+          "head": "生态合作伙伴",
+          "relation": "INVEST",
+          "source": "DOC-FULL_parsed",
+          "tail": "5亿元",
+          "triple_id": "TRIPLE-REL-000032"
+        },
+        {
+          "confidence": 0.95,
+          "graph_version": "v1.0",
+          "head": "某科技集团",
+          "relation": "INVEST",
+          "source": "DOC-FULL_parsed",
+          "tail": "5亿元",
+          "triple_id": "TRIPLE-REL-000034"
+        }
+      ],
+      "kg_build_result": {
+        "edges": 16,
+        "nodes": 11,
+        "records_written": 16,
+        "relation_set_id": "DOC-FULL_parsed",
+        "triples": 16
+      },
+      "relation_checkpoint": {
+        "avg_confidence": 0.8968749999999999,
+        "entities_found": 36,
+        "entity_set_id": "DOC-FULL_parsed",
+        "model": "Relation-BERT",
+        "relation_types": [
+          "COLLABORATE",
+          "EMPLOY",
+          "INVEST",
+          "LOCATE",
+          "OCCUR_AT"
+        ],
+        "relations_extracted": 16
+      },
+      "relation_evidence_manifest": {
+        "entity_set_id": "DOC-FULL_parsed",
+        "evidence_file": "<DATA_ROOT>/relation_evidence/DOC-FULL_parsed_relation_evidence.jsonl",
+        "evidence_group_count": 16,
+        "evidence_records_written": 16,
+        "input_checksum": "db1b6c6d7d1da28b",
+        "input_record_count": 40
+      },
+      "relation_evidence_rows": [
+        {
+          "candidate_count": 1,
+          "candidates": [
+            {
+              "confidence": 0.81,
+              "evidence_sentence": "某科技集团 与 张三博士 之间存在「EMPLOY」关系",
+              "record_id": "REL-000001",
+              "source": null
+            }
+          ],
+          "group_key": [
+            "某科技集团",
+            "EMPLOY",
+            "张三博士"
+          ],
+          "winner_confidence": 0.81,
+          "winner_id": "REL-000001"
+        },
+        {
+          "candidate_count": 1,
+          "candidates": [
+            {
+              "confidence": 0.8400000000000001,
+              "evidence_sentence": "某科技集团 与 首席科学家 之间存在「EMPLOY」关系",
+              "record_id": "REL-000002",
+              "source": null
+            }
+          ],
+          "group_key": [
+            "某科技集团",
+            "EMPLOY",
+            "首席科学家"
+          ],
+          "winner_confidence": 0.8400000000000001,
+          "winner_id": "REL-000002"
+        },
+        {
+          "candidate_count": 1,
+          "candidates": [
+            {
+              "confidence": 0.87,
+              "evidence_sentence": "生态合作伙伴 与 张三博士 之间存在「EMPLOY」关系",
+              "record_id": "REL-000003",
+              "source": null
+            }
+          ],
+          "group_key": [
+            "生态合作伙伴",
+            "EMPLOY",
+            "张三博士"
+          ],
+          "winner_confidence": 0.87,
+          "winner_id": "REL-000003"
+        },
+        {
+          "candidate_count": 1,
+          "candidates": [
+            {
+              "confidence": 0.9,
+              "evidence_sentence": "生态合作伙伴 与 首席科学家 之间存在「EMPLOY」关系",
+              "record_id": "REL-000004",
+              "source": null
+            }
+          ],
+          "group_key": [
+            "生态合作伙伴",
+            "EMPLOY",
+            "首席科学家"
+          ],
+          "winner_confidence": 0.9,
+          "winner_id": "REL-000004"
+        },
+        {
+          "candidate_count": 1,
+          "candidates": [
+            {
+              "confidence": 0.93,
+              "evidence_sentence": "某科技集团 与 Beijing 之间存在「LOCATE」关系",
+              "record_id": "REL-000005",
+              "source": null
+            }
+          ],
+          "group_key": [
+            "某科技集团",
+            "LOCATE",
+            "Beijing"
+          ],
+          "winner_confidence": 0.93,
+          "winner_id": "REL-000005"
+        },
+        {
+          "candidate_count": 1,
+          "candidates": [
+            {
+              "confidence": 0.95,
+              "evidence_sentence": "某科技集团 与 Shanghai 之间存在「LOCATE」关系",
+              "record_id": "REL-000006",
+              "source": null
+            }
+          ],
+          "group_key": [
+            "某科技集团",
+            "LOCATE",
+            "Shanghai"
+          ],
+          "winner_confidence": 0.95,
+          "winner_id": "REL-000006"
+        },
+        {
+          "candidate_count": 1,
+          "candidates": [
+            {
+              "confidence": 0.78,
+              "evidence_sentence": "某科技集团 与 总部 之间存在「LOCATE」关系",
+              "record_id": "REL-000007",
+              "source": null
+            }
+          ],
+          "group_key": [
+            "某科技集团",
+            "LOCATE",
+            "总部"
+          ],
+          "winner_confidence": 0.78,
+          "winner_id": "REL-000007"
+        },
+        {
+          "candidate_count": 1,
+          "candidates": [
+            {
+              "confidence": 0.81,
+              "evidence_sentence": "生态合作伙伴 与 Beijing 之间存在「LOCATE」关系",
+              "record_id": "REL-000008",
+              "source": null
+            }
+          ],
+          "group_key": [
+            "生态合作伙伴",
+            "LOCATE",
+            "Beijing"
+          ],
+          "winner_confidence": 0.81,
+          "winner_id": "REL-000008"
+        },
+        {
+          "candidate_count": 1,
+          "candidates": [
+            {
+              "confidence": 0.8400000000000001,
+              "evidence_sentence": "生态合作伙伴 与 Shanghai 之间存在「LOCATE」关系",
+              "record_id": "REL-000009",
+              "source": null
+            }
+          ],
+          "group_key": [
+            "生态合作伙伴",
+            "LOCATE",
+            "Shanghai"
+          ],
+          "winner_confidence": 0.8400000000000001,
+          "winner_id": "REL-000009"
+        },
+        {
+          "candidate_count": 1,
+          "candidates": [
+            {
+              "confidence": 0.87,
+              "evidence_sentence": "生态合作伙伴 与 总部 之间存在「LOCATE」关系",
+              "record_id": "REL-000010",
+              "source": null
+            }
+          ],
+          "group_key": [
+            "生态合作伙伴",
+            "LOCATE",
+            "总部"
+          ],
+          "winner_confidence": 0.87,
+          "winner_id": "REL-000010"
+        },
+        {
+          "candidate_count": 1,
+          "candidates": [
+            {
+              "confidence": 0.9,
+              "evidence_sentence": "某科技集团 与 生态合作伙伴 之间存在「COLLABORATE」关系",
+              "record_id": "REL-000011",
+              "source": null
+            }
+          ],
+          "group_key": [
+            "某科技集团",
+            "COLLABORATE",
+            "生态合作伙伴"
+          ],
+          "winner_confidence": 0.9,
+          "winner_id": "REL-000011"
+        },
+        {
+          "candidate_count": 1,
+          "candidates": [
+            {
+              "confidence": 0.93,
+              "evidence_sentence": "生态合作伙伴 与 某科技集团 之间存在「COLLABORATE」关系",
+              "record_id": "REL-000012",
+              "source": null
+            }
+          ],
+          "group_key": [
+            "生态合作伙伴",
+            "COLLABORATE",
+            "某科技集团"
+          ],
+          "winner_confidence": 0.93,
+          "winner_id": "REL-000012"
+        },
+        {
+          "candidate_count": 1,
+          "candidates": [
+            {
+              "confidence": 0.95,
+              "evidence_sentence": "知识图谱 与 2024年 之间存在「OCCUR_AT」关系",
+              "record_id": "REL-000013",
+              "source": null
+            }
+          ],
+          "group_key": [
+            "知识图谱",
+            "OCCUR_AT",
+            "2024年"
+          ],
+          "winner_confidence": 0.95,
+          "winner_id": "REL-000013"
+        },
+        {
+          "candidate_count": 1,
+          "candidates": [
+            {
+              "confidence": 0.78,
+              "evidence_sentence": "信息抽取 与 2024年 之间存在「OCCUR_AT」关系",
+              "record_id": "REL-000014",
+              "source": null
+            }
+          ],
+          "group_key": [
+            "信息抽取",
+            "OCCUR_AT",
+            "2024年"
+          ],
+          "winner_confidence": 0.78,
+          "winner_id": "REL-000014"
+        },
+        {
+          "candidate_count": 1,
+          "candidates": [
+            {
+              "confidence": 0.81,
+              "evidence_sentence": "某科技集团 与 5亿元 之间存在「INVEST」关系",
+              "record_id": "REL-000015",
+              "source": null
+            }
+          ],
+          "group_key": [
+            "某科技集团",
+            "INVEST",
+            "5亿元"
+          ],
+          "winner_confidence": 0.81,
+          "winner_id": "REL-000015"
+        },
+        {
+          "candidate_count": 1,
+          "candidates": [
+            {
+              "confidence": 0.8400000000000001,
+              "evidence_sentence": "生态合作伙伴 与 5亿元 之间存在「INVEST」关系",
+              "record_id": "REL-000016",
+              "source": null
+            }
+          ],
+          "group_key": [
+            "生态合作伙伴",
+            "INVEST",
+            "5亿元"
+          ],
+          "winner_confidence": 0.8400000000000001,
+          "winner_id": "REL-000016"
+        },
+        {
+          "candidate_count": 4,
+          "candidates": [
+            {
+              "confidence": 0.81,
+              "evidence_sentence": "某科技集团 与 张三博士 之间存在「EMPLOY」关系",
+              "record_id": "REL-000001",
+              "source": null
+            },
+            {
+              "confidence": 0.87,
+              "evidence_sentence": "某科技集团 与 张三博士 之间存在「EMPLOY」关系",
+              "record_id": "REL-000003",
+              "source": null
+            },
+            {
+              "confidence": 0.78,
+              "evidence_sentence": "某科技集团 与 张三博士 之间存在「EMPLOY」关系",
+              "record_id": "REL-000007",
+              "source": null
+            },
+            {
+              "confidence": 0.8400000000000001,
+              "evidence_sentence": "某科技集团 与 张三博士 之间存在「EMPLOY」关系",
+              "record_id": "REL-000009",
+              "source": null
+            }
+          ],
+          "group_key": [
+            "某科技集团",
+            "EMPLOY",
+            "张三博士"
+          ],
+          "winner_confidence": 0.87,
+          "winner_id": "REL-000003"
+        },
+        {
+          "candidate_count": 2,
+          "candidates": [
+            {
+              "confidence": 0.8400000000000001,
+              "evidence_sentence": "某科技集团 与 首席科学家 之间存在「EMPLOY」关系",
+              "record_id": "REL-000002",
+              "source": null
+            },
+            {
+              "confidence": 0.81,
+              "evidence_sentence": "某科技集团 与 首席科学家 之间存在「EMPLOY」关系",
+              "record_id": "REL-000008",
+              "source": null
+            }
+          ],
+          "group_key": [
+            "某科技集团",
+            "EMPLOY",
+            "首席科学家"
+          ],
+          "winner_confidence": 0.8400000000000001,
+          "winner_id": "REL-000002"
+        },
+        {
+          "candidate_count": 2,
+          "candidates": [
+            {
+              "confidence": 0.9,
+              "evidence_sentence": "生态合作伙伴 与 张三博士 之间存在「EMPLOY」关系",
+              "record_id": "REL-000004",
+              "source": null
+            },
+            {
+              "confidence": 0.95,
+              "evidence_sentence": "生态合作伙伴 与 张三博士 之间存在「EMPLOY」关系",
+              "record_id": "REL-000006",
+              "source": null
+            }
+          ],
+          "group_key": [
+            "生态合作伙伴",
+            "EMPLOY",
+            "张三博士"
+          ],
+          "winner_confidence": 0.95,
+          "winner_id": "REL-000006"
+        },
+        {
+          "candidate_count": 1,
+          "candidates": [
+            {
+              "confidence": 0.93,
+              "evidence_sentence": "生态合作伙伴 与 首席科学家 之间存在「EMPLOY」关系",
+              "record_id": "REL-000005",
+              "source": null
+            }
+          ],
+          "group_key": [
+            "生态合作伙伴",
+            "EMPLOY",
+            "首席科学家"
+          ],
+          "winner_confidence": 0.93,
+          "winner_id": "REL-000005"
+        },
+        {
+          "candidate_count": 2,
+          "candidates": [
+            {
+              "confidence": 0.87,
+              "evidence_sentence": "某科技集团 与 Beijing 之间存在「LOCATE」关系",
+              "record_id": "REL-000010",
+              "source": null
+            },
+            {
+              "confidence": 0.8400000000000001,
+              "evidence_sentence": "某科技集团 与 Beijing 之间存在「LOCATE」关系",
+              "record_id": "REL-000016",
+              "source": null
+            }
+          ],
+          "group_key": [
+            "某科技集团",
+            "LOCATE",
+            "Beijing"
+          ],
+          "winner_confidence": 0.87,
+          "winner_id": "REL-000010"
+        },
+        {
+          "candidate_count": 2,
+          "candidates": [
+            {
+              "confidence": 0.9,
+              "evidence_sentence": "某科技集团 与 Shanghai 之间存在「LOCATE」关系",
+              "record_id": "REL-000011",
+              "source": null
+            },
+            {
+              "confidence": 0.87,
+              "evidence_sentence": "某科技集团 与 Shanghai 之间存在「LOCATE」关系",
+              "record_id": "REL-000017",
+              "source": null
+            }
+          ],
+          "group_key": [
+            "某科技集团",
+            "LOCATE",
+            "Shanghai"
+          ],
+          "winner_confidence": 0.9,
+          "winner_id": "REL-000011"
+        },
+        {
+          "candidate_count": 2,
+          "candidates": [
+            {
+              "confidence": 0.93,
+              "evidence_sentence": "某科技集团 与 总部 之间存在「LOCATE」关系",
+              "record_id": "REL-000012",
+              "source": null
+            },
+            {
+              "confidence": 0.9,
+              "evidence_sentence": "某科技集团 与 总部 之间存在「LOCATE」关系",
+              "record_id": "REL-000018",
+              "source": null
+            }
+          ],
+          "group_key": [
+            "某科技集团",
+            "LOCATE",
+            "总部"
+          ],
+          "winner_confidence": 0.93,
+          "winner_id": "REL-000012"
+        },
+        {
+          "candidate_count": 1,
+          "candidates": [
+            {
+              "confidence": 0.95,
+              "evidence_sentence": "生态合作伙伴 与 Beijing 之间存在「LOCATE」关系",
+              "record_id": "REL-000013",
+              "source": null
+            }
+          ],
+          "group_key": [
+            "生态合作伙伴",
+            "LOCATE",
+            "Beijing"
+          ],
+          "winner_confidence": 0.95,
+          "winner_id": "REL-000013"
+        },
+        {
+          "candidate_count": 1,
+          "candidates": [
+            {
+              "confidence": 0.78,
+              "evidence_sentence": "生态合作伙伴 与 Shanghai 之间存在「LOCATE」关系",
+              "record_id": "REL-000014",
+              "source": null
+            }
+          ],
+          "group_key": [
+            "生态合作伙伴",
+            "LOCATE",
+            "Shanghai"
+          ],
+          "winner_confidence": 0.78,
+          "winner_id": "REL-000014"
+        },
+        {
+          "candidate_count": 1,
+          "candidates": [
+            {
+              "confidence": 0.81,
+              "evidence_sentence": "生态合作伙伴 与 总部 之间存在「LOCATE」关系",
+              "record_id": "REL-000015",
+              "source": null
+            }
+          ],
+          "group_key": [
+            "生态合作伙伴",
+            "LOCATE",
+            "总部"
+          ],
+          "winner_confidence": 0.81,
+          "winner_id": "REL-000015"
+        },
+        {
+          "candidate_count": 2,
+          "candidates": [
+            {
+              "confidence": 0.93,
+              "evidence_sentence": "某科技集团 与 生态合作伙伴 之间存在「COLLABORATE」关系",
+              "record_id": "REL-000019",
+              "source": null
+            },
+            {
+              "confidence": 0.81,
+              "evidence_sentence": "某科技集团 与 生态合作伙伴 之间存在「COLLABORATE」关系",
+              "record_id": "REL-000022",
+              "source": null
+            }
+          ],
+          "group_key": [
+            "某科技集团",
+            "COLLABORATE",
+            "生态合作伙伴"
+          ],
+          "winner_confidence": 0.93,
+          "winner_id": "REL-000019"
+        },
+        {
+          "candidate_count": 2,
+          "candidates": [
+            {
+              "confidence": 0.95,
+              "evidence_sentence": "生态合作伙伴 与 某科技集团 之间存在「COLLABORATE」关系",
+              "record_id": "REL-000020",
+              "source": null
+            },
+            {
+              "confidence": 0.78,
+              "evidence_sentence": "生态合作伙伴 与 某科技集团 之间存在「COLLABORATE」关系",
+              "record_id": "REL-000021",
+              "source": null
+            }
+          ],
+          "group_key": [
+            "生态合作伙伴",
+            "COLLABORATE",
+            "某科技集团"
+          ],
+          "winner_confidence": 0.95,
+          "winner_id": "REL-000020"
+        },
+        {
+          "candidate_count": 4,
+          "candidates": [
+            {
+              "confidence": 0.8400000000000001,
+              "evidence_sentence": "知识图谱 与 2024年 之间存在「OCCUR_AT」关系",
+              "record_id": "REL-000023",
+              "source": null
+            },
+            {
+              "confidence": 0.87,
+              "evidence_sentence": "知识图谱 与 2024年 之间存在「OCCUR_AT」关系",
+              "record_id": "REL-000024",
+              "source": null
+            },
+            {
+              "confidence": 0.95,
+              "evidence_sentence": "知识图谱 与 2024年 之间存在「OCCUR_AT」关系",
+              "record_id": "REL-000027",
+              "source": null
+            },
+            {
+              "confidence": 0.78,
+              "evidence_sentence": "知识图谱 与 2024年 之间存在「OCCUR_AT」关系",
+              "record_id": "REL-000028",
+              "source": null
+            }
+          ],
+          "group_key": [
+            "知识图谱",
+            "OCCUR_AT",
+            "2024年"
+          ],
+          "winner_confidence": 0.95,
+          "winner_id": "REL-000027"
+        },
+        {
+          "candidate_count": 2,
+          "candidates": [
+            {
+              "confidence": 0.9,
+              "evidence_sentence": "信息抽取 与 2024年 之间存在「OCCUR_AT」关系",
+              "record_id": "REL-000025",
+              "source": null
+            },
+            {
+              "confidence": 0.93,
+              "evidence_sentence": "信息抽取 与 2024年 之间存在「OCCUR_AT」关系",
+              "record_id": "REL-000026",
+              "source": null
+            }
+          ],
+          "group_key": [
+            "信息抽取",
+            "OCCUR_AT",
+            "2024年"
+          ],
+          "winner_confidence": 0.93,
+          "winner_id": "REL-000026"
+        },
+        {
+          "candidate_count": 4,
+          "candidates": [
+            {
+              "confidence": 0.81,
+              "evidence_sentence": "某科技集团 与 5亿元 之间存在「INVEST」关系",
+              "record_id": "REL-000029",
+              "source": null
+            },
+            {
+              "confidence": 0.8400000000000001,
+              "evidence_sentence": "某科技集团 与 5亿元 之间存在「INVEST」关系",
+              "record_id": "REL-000030",
+              "source": null
+            },
+            {
+              "confidence": 0.93,
+              "evidence_sentence": "某科技集团 与 5亿元 之间存在「INVEST」关系",
+              "record_id": "REL-000033",
+              "source": null
+            },
+            {
+              "confidence": 0.95,
+              "evidence_sentence": "某科技集团 与 5亿元 之间存在「INVEST」关系",
+              "record_id": "REL-000034",
+              "source": null
+            }
+          ],
+          "group_key": [
+            "某科技集团",
+            "INVEST",
+            "5亿元"
+          ],
+          "winner_confidence": 0.95,
+          "winner_id": "REL-000034"
+        },
+        {
+          "candidate_count": 2,
+          "candidates": [
+            {
+              "confidence": 0.87,
+              "evidence_sentence": "生态合作伙伴 与 5亿元 之间存在「INVEST」关系",
+              "record_id": "REL-000031",
+              "source": null
+            },
+            {
+              "confidence": 0.9,
+              "evidence_sentence": "生态合作伙伴 与 5亿元 之间存在「INVEST」关系",
+              "record_id": "REL-000032",
+              "source": null
+            }
+          ],
+          "group_key": [
+            "生态合作伙伴",
+            "INVEST",
+            "5亿元"
+          ],
+          "winner_confidence": 0.9,
+          "winner_id": "REL-000032"
+        },
+        {
+          "candidate_count": 4,
+          "candidates": [
+            {
+              "confidence": 0.81,
+              "evidence_sentence": "某科技集团 与 张三博士 之间存在「EMPLOY」关系",
+              "record_id": "REL-000001",
+              "source": null
+            },
+            {
+              "confidence": 0.87,
+              "evidence_sentence": "某科技集团 与 张三博士 之间存在「EMPLOY」关系",
+              "record_id": "REL-000003",
+              "source": null
+            },
+            {
+              "confidence": 0.78,
+              "evidence_sentence": "某科技集团 与 张三博士 之间存在「EMPLOY」关系",
+              "record_id": "REL-000007",
+              "source": null
+            },
+            {
+              "confidence": 0.8400000000000001,
+              "evidence_sentence": "某科技集团 与 张三博士 之间存在「EMPLOY」关系",
+              "record_id": "REL-000009",
+              "source": null
+            }
+          ],
+          "group_key": [
+            "某科技集团",
+            "EMPLOY",
+            "张三博士"
+          ],
+          "winner_confidence": 0.87,
+          "winner_id": "REL-000003"
+        },
+        {
+          "candidate_count": 2,
+          "candidates": [
+            {
+              "confidence": 0.8400000000000001,
+              "evidence_sentence": "某科技集团 与 首席科学家 之间存在「EMPLOY」关系",
+              "record_id": "REL-000002",
+              "source": null
+            },
+            {
+              "confidence": 0.81,
+              "evidence_sentence": "某科技集团 与 首席科学家 之间存在「EMPLOY」关系",
+              "record_id": "REL-000008",
+              "source": null
+            }
+          ],
+          "group_key": [
+            "某科技集团",
+            "EMPLOY",
+            "首席科学家"
+          ],
+          "winner_confidence": 0.8400000000000001,
+          "winner_id": "REL-000002"
+        },
+        {
+          "candidate_count": 2,
+          "candidates": [
+            {
+              "confidence": 0.9,
+              "evidence_sentence": "生态合作伙伴 与 张三博士 之间存在「EMPLOY」关系",
+              "record_id": "REL-000004",
+              "source": null
+            },
+            {
+              "confidence": 0.95,
+              "evidence_sentence": "生态合作伙伴 与 张三博士 之间存在「EMPLOY」关系",
+              "record_id": "REL-000006",
+              "source": null
+            }
+          ],
+          "group_key": [
+            "生态合作伙伴",
+            "EMPLOY",
+            "张三博士"
+          ],
+          "winner_confidence": 0.95,
+          "winner_id": "REL-000006"
+        },
+        {
+          "candidate_count": 1,
+          "candidates": [
+            {
+              "confidence": 0.93,
+              "evidence_sentence": "生态合作伙伴 与 首席科学家 之间存在「EMPLOY」关系",
+              "record_id": "REL-000005",
+              "source": null
+            }
+          ],
+          "group_key": [
+            "生态合作伙伴",
+            "EMPLOY",
+            "首席科学家"
+          ],
+          "winner_confidence": 0.93,
+          "winner_id": "REL-000005"
+        },
+        {
+          "candidate_count": 2,
+          "candidates": [
+            {
+              "confidence": 0.87,
+              "evidence_sentence": "某科技集团 与 Beijing 之间存在「LOCATE」关系",
+              "record_id": "REL-000010",
+              "source": null
+            },
+            {
+              "confidence": 0.8400000000000001,
+              "evidence_sentence": "某科技集团 与 Beijing 之间存在「LOCATE」关系",
+              "record_id": "REL-000016",
+              "source": null
+            }
+          ],
+          "group_key": [
+            "某科技集团",
+            "LOCATE",
+            "Beijing"
+          ],
+          "winner_confidence": 0.87,
+          "winner_id": "REL-000010"
+        },
+        {
+          "candidate_count": 2,
+          "candidates": [
+            {
+              "confidence": 0.9,
+              "evidence_sentence": "某科技集团 与 Shanghai 之间存在「LOCATE」关系",
+              "record_id": "REL-000011",
+              "source": null
+            },
+            {
+              "confidence": 0.87,
+              "evidence_sentence": "某科技集团 与 Shanghai 之间存在「LOCATE」关系",
+              "record_id": "REL-000017",
+              "source": null
+            }
+          ],
+          "group_key": [
+            "某科技集团",
+            "LOCATE",
+            "Shanghai"
+          ],
+          "winner_confidence": 0.9,
+          "winner_id": "REL-000011"
+        },
+        {
+          "candidate_count": 2,
+          "candidates": [
+            {
+              "confidence": 0.93,
+              "evidence_sentence": "某科技集团 与 总部 之间存在「LOCATE」关系",
+              "record_id": "REL-000012",
+              "source": null
+            },
+            {
+              "confidence": 0.9,
+              "evidence_sentence": "某科技集团 与 总部 之间存在「LOCATE」关系",
+              "record_id": "REL-000018",
+              "source": null
+            }
+          ],
+          "group_key": [
+            "某科技集团",
+            "LOCATE",
+            "总部"
+          ],
+          "winner_confidence": 0.93,
+          "winner_id": "REL-000012"
+        },
+        {
+          "candidate_count": 1,
+          "candidates": [
+            {
+              "confidence": 0.95,
+              "evidence_sentence": "生态合作伙伴 与 Beijing 之间存在「LOCATE」关系",
+              "record_id": "REL-000013",
+              "source": null
+            }
+          ],
+          "group_key": [
+            "生态合作伙伴",
+            "LOCATE",
+            "Beijing"
+          ],
+          "winner_confidence": 0.95,
+          "winner_id": "REL-000013"
+        },
+        {
+          "candidate_count": 1,
+          "candidates": [
+            {
+              "confidence": 0.78,
+              "evidence_sentence": "生态合作伙伴 与 Shanghai 之间存在「LOCATE」关系",
+              "record_id": "REL-000014",
+              "source": null
+            }
+          ],
+          "group_key": [
+            "生态合作伙伴",
+            "LOCATE",
+            "Shanghai"
+          ],
+          "winner_confidence": 0.78,
+          "winner_id": "REL-000014"
+        },
+        {
+          "candidate_count": 1,
+          "candidates": [
+            {
+              "confidence": 0.81,
+              "evidence_sentence": "生态合作伙伴 与 总部 之间存在「LOCATE」关系",
+              "record_id": "REL-000015",
+              "source": null
+            }
+          ],
+          "group_key": [
+            "生态合作伙伴",
+            "LOCATE",
+            "总部"
+          ],
+          "winner_confidence": 0.81,
+          "winner_id": "REL-000015"
+        },
+        {
+          "candidate_count": 2,
+          "candidates": [
+            {
+              "confidence": 0.93,
+              "evidence_sentence": "某科技集团 与 生态合作伙伴 之间存在「COLLABORATE」关系",
+              "record_id": "REL-000019",
+              "source": null
+            },
+            {
+              "confidence": 0.81,
+              "evidence_sentence": "某科技集团 与 生态合作伙伴 之间存在「COLLABORATE」关系",
+              "record_id": "REL-000022",
+              "source": null
+            }
+          ],
+          "group_key": [
+            "某科技集团",
+            "COLLABORATE",
+            "生态合作伙伴"
+          ],
+          "winner_confidence": 0.93,
+          "winner_id": "REL-000019"
+        },
+        {
+          "candidate_count": 2,
+          "candidates": [
+            {
+              "confidence": 0.95,
+              "evidence_sentence": "生态合作伙伴 与 某科技集团 之间存在「COLLABORATE」关系",
+              "record_id": "REL-000020",
+              "source": null
+            },
+            {
+              "confidence": 0.78,
+              "evidence_sentence": "生态合作伙伴 与 某科技集团 之间存在「COLLABORATE」关系",
+              "record_id": "REL-000021",
+              "source": null
+            }
+          ],
+          "group_key": [
+            "生态合作伙伴",
+            "COLLABORATE",
+            "某科技集团"
+          ],
+          "winner_confidence": 0.95,
+          "winner_id": "REL-000020"
+        },
+        {
+          "candidate_count": 6,
+          "candidates": [
+            {
+              "confidence": 0.8400000000000001,
+              "evidence_sentence": "知识图谱 与 2024年 之间存在「OCCUR_AT」关系",
+              "record_id": "REL-000023",
+              "source": null
+            },
+            {
+              "confidence": 0.87,
+              "evidence_sentence": "知识图谱 与 2024年 之间存在「OCCUR_AT」关系",
+              "record_id": "REL-000024",
+              "source": null
+            },
+            {
+              "confidence": 0.9,
+              "evidence_sentence": "知识图谱 与 2024年 之间存在「OCCUR_AT」关系",
+              "record_id": "REL-000025",
+              "source": null
+            },
+            {
+              "confidence": 0.81,
+              "evidence_sentence": "知识图谱 与 2024年 之间存在「OCCUR_AT」关系",
+              "record_id": "REL-000029",
+              "source": null
+            },
+            {
+              "confidence": 0.8400000000000001,
+              "evidence_sentence": "知识图谱 与 2024年 之间存在「OCCUR_AT」关系",
+              "record_id": "REL-000030",
+              "source": null
+            },
+            {
+              "confidence": 0.87,
+              "evidence_sentence": "知识图谱 与 2024年 之间存在「OCCUR_AT」关系",
+              "record_id": "REL-000031",
+              "source": null
+            }
+          ],
+          "group_key": [
+            "知识图谱",
+            "OCCUR_AT",
+            "2024年"
+          ],
+          "winner_confidence": 0.9,
+          "winner_id": "REL-000025"
+        },
+        {
+          "candidate_count": 3,
+          "candidates": [
+            {
+              "confidence": 0.93,
+              "evidence_sentence": "信息抽取 与 2024年 之间存在「OCCUR_AT」关系",
+              "record_id": "REL-000026",
+              "source": null
+            },
+            {
+              "confidence": 0.95,
+              "evidence_sentence": "信息抽取 与 2024年 之间存在「OCCUR_AT」关系",
+              "record_id": "REL-000027",
+              "source": null
+            },
+            {
+              "confidence": 0.78,
+              "evidence_sentence": "信息抽取 与 2024年 之间存在「OCCUR_AT」关系",
+              "record_id": "REL-000028",
+              "source": null
+            }
+          ],
+          "group_key": [
+            "信息抽取",
+            "OCCUR_AT",
+            "2024年"
+          ],
+          "winner_confidence": 0.95,
+          "winner_id": "REL-000027"
+        },
+        {
+          "candidate_count": 6,
+          "candidates": [
+            {
+              "confidence": 0.9,
+              "evidence_sentence": "某科技集团 与 5亿元 之间存在「INVEST」关系",
+              "record_id": "REL-000032",
+              "source": null
+            },
+            {
+              "confidence": 0.93,
+              "evidence_sentence": "某科技集团 与 5亿元 之间存在「INVEST」关系",
+              "record_id": "REL-000033",
+              "source": null
+            },
+            {
+              "confidence": 0.95,
+              "evidence_sentence": "某科技集团 与 5亿元 之间存在「INVEST」关系",
+              "record_id": "REL-000034",
+              "source": null
+            },
+            {
+              "confidence": 0.87,
+              "evidence_sentence": "某科技集团 与 5亿元 之间存在「INVEST」关系",
+              "record_id": "REL-000038",
+              "source": null
+            },
+            {
+              "confidence": 0.9,
+              "evidence_sentence": "某科技集团 与 5亿元 之间存在「INVEST」关系",
+              "record_id": "REL-000039",
+              "source": null
+            },
+            {
+              "confidence": 0.93,
+              "evidence_sentence": "某科技集团 与 5亿元 之间存在「INVEST」关系",
+              "record_id": "REL-000040",
+              "source": null
+            }
+          ],
+          "group_key": [
+            "某科技集团",
+            "INVEST",
+            "5亿元"
+          ],
+          "winner_confidence": 0.95,
+          "winner_id": "REL-000034"
+        },
+        {
+          "candidate_count": 3,
+          "candidates": [
+            {
+              "confidence": 0.78,
+              "evidence_sentence": "生态合作伙伴 与 5亿元 之间存在「INVEST」关系",
+              "record_id": "REL-000035",
+              "source": null
+            },
+            {
+              "confidence": 0.81,
+              "evidence_sentence": "生态合作伙伴 与 5亿元 之间存在「INVEST」关系",
+              "record_id": "REL-000036",
+              "source": null
+            },
+            {
+              "confidence": 0.8400000000000001,
+              "evidence_sentence": "生态合作伙伴 与 5亿元 之间存在「INVEST」关系",
+              "record_id": "REL-000037",
+              "source": null
+            }
+          ],
+          "group_key": [
+            "生态合作伙伴",
+            "INVEST",
+            "5亿元"
+          ],
+          "winner_confidence": 0.8400000000000001,
+          "winner_id": "REL-000037"
+        },
+        {
+          "candidate_count": 4,
+          "candidates": [
+            {
+              "confidence": 0.81,
+              "evidence_sentence": "某科技集团 与 张三博士 之间存在「EMPLOY」关系",
+              "record_id": "REL-000001",
+              "source": null
+            },
+            {
+              "confidence": 0.87,
+              "evidence_sentence": "某科技集团 与 张三博士 之间存在「EMPLOY」关系",
+              "record_id": "REL-000003",
+              "source": null
+            },
+            {
+              "confidence": 0.78,
+              "evidence_sentence": "某科技集团 与 张三博士 之间存在「EMPLOY」关系",
+              "record_id": "REL-000007",
+              "source": null
+            },
+            {
+              "confidence": 0.8400000000000001,
+              "evidence_sentence": "某科技集团 与 张三博士 之间存在「EMPLOY」关系",
+              "record_id": "REL-000009",
+              "source": null
+            }
+          ],
+          "group_key": [
+            "某科技集团",
+            "EMPLOY",
+            "张三博士"
+          ],
+          "winner_confidence": 0.87,
+          "winner_id": "REL-000003"
+        },
+        {
+          "candidate_count": 2,
+          "candidates": [
+            {
+              "confidence": 0.8400000000000001,
+              "evidence_sentence": "某科技集团 与 首席科学家 之间存在「EMPLOY」关系",
+              "record_id": "REL-000002",
+              "source": null
+            },
+            {
+              "confidence": 0.81,
+              "evidence_sentence": "某科技集团 与 首席科学家 之间存在「EMPLOY」关系",
+              "record_id": "REL-000008",
+              "source": null
+            }
+          ],
+          "group_key": [
+            "某科技集团",
+            "EMPLOY",
+            "首席科学家"
+          ],
+          "winner_confidence": 0.8400000000000001,
+          "winner_id": "REL-000002"
+        },
+        {
+          "candidate_count": 2,
+          "candidates": [
+            {
+              "confidence": 0.9,
+              "evidence_sentence": "生态合作伙伴 与 张三博士 之间存在「EMPLOY」关系",
+              "record_id": "REL-000004",
+              "source": null
+            },
+            {
+              "confidence": 0.95,
+              "evidence_sentence": "生态合作伙伴 与 张三博士 之间存在「EMPLOY」关系",
+              "record_id": "REL-000006",
+              "source": null
+            }
+          ],
+          "group_key": [
+            "生态合作伙伴",
+            "EMPLOY",
+            "张三博士"
+          ],
+          "winner_confidence": 0.95,
+          "winner_id": "REL-000006"
+        },
+        {
+          "candidate_count": 1,
+          "candidates": [
+            {
+              "confidence": 0.93,
+              "evidence_sentence": "生态合作伙伴 与 首席科学家 之间存在「EMPLOY」关系",
+              "record_id": "REL-000005",
+              "source": null
+            }
+          ],
+          "group_key": [
+            "生态合作伙伴",
+            "EMPLOY",
+            "首席科学家"
+          ],
+          "winner_confidence": 0.93,
+          "winner_id": "REL-000005"
+        },
+        {
+          "candidate_count": 2,
+          "candidates": [
+            {
+              "confidence": 0.87,
+              "evidence_sentence": "某科技集团 与 Beijing 之间存在「LOCATE」关系",
+              "record_id": "REL-000010",
+              "source": null
+            },
+            {
+              "confidence": 0.8400000000000001,
+              "evidence_sentence": "某科技集团 与 Beijing 之间存在「LOCATE」关系",
+              "record_id": "REL-000016",
+              "source": null
+            }
+          ],
+          "group_key": [
+            "某科技集团",
+            "LOCATE",
+            "Beijing"
+          ],
+          "winner_confidence": 0.87,
+          "winner_id": "REL-000010"
+        },
+        {
+          "candidate_count": 2,
+          "candidates": [
+            {
+              "confidence": 0.9,
+              "evidence_sentence": "某科技集团 与 Shanghai 之间存在「LOCATE」关系",
+              "record_id": "REL-000011",
+              "source": null
+            },
+            {
+              "confidence": 0.87,
+              "evidence_sentence": "某科技集团 与 Shanghai 之间存在「LOCATE」关系",
+              "record_id": "REL-000017",
+              "source": null
+            }
+          ],
+          "group_key": [
+            "某科技集团",
+            "LOCATE",
+            "Shanghai"
+          ],
+          "winner_confidence": 0.9,
+          "winner_id": "REL-000011"
+        },
+        {
+          "candidate_count": 2,
+          "candidates": [
+            {
+              "confidence": 0.93,
+              "evidence_sentence": "某科技集团 与 总部 之间存在「LOCATE」关系",
+              "record_id": "REL-000012",
+              "source": null
+            },
+            {
+              "confidence": 0.9,
+              "evidence_sentence": "某科技集团 与 总部 之间存在「LOCATE」关系",
+              "record_id": "REL-000018",
+              "source": null
+            }
+          ],
+          "group_key": [
+            "某科技集团",
+            "LOCATE",
+            "总部"
+          ],
+          "winner_confidence": 0.93,
+          "winner_id": "REL-000012"
+        },
+        {
+          "candidate_count": 1,
+          "candidates": [
+            {
+              "confidence": 0.95,
+              "evidence_sentence": "生态合作伙伴 与 Beijing 之间存在「LOCATE」关系",
+              "record_id": "REL-000013",
+              "source": null
+            }
+          ],
+          "group_key": [
+            "生态合作伙伴",
+            "LOCATE",
+            "Beijing"
+          ],
+          "winner_confidence": 0.95,
+          "winner_id": "REL-000013"
+        },
+        {
+          "candidate_count": 1,
+          "candidates": [
+            {
+              "confidence": 0.78,
+              "evidence_sentence": "生态合作伙伴 与 Shanghai 之间存在「LOCATE」关系",
+              "record_id": "REL-000014",
+              "source": null
+            }
+          ],
+          "group_key": [
+            "生态合作伙伴",
+            "LOCATE",
+            "Shanghai"
+          ],
+          "winner_confidence": 0.78,
+          "winner_id": "REL-000014"
+        },
+        {
+          "candidate_count": 1,
+          "candidates": [
+            {
+              "confidence": 0.81,
+              "evidence_sentence": "生态合作伙伴 与 总部 之间存在「LOCATE」关系",
+              "record_id": "REL-000015",
+              "source": null
+            }
+          ],
+          "group_key": [
+            "生态合作伙伴",
+            "LOCATE",
+            "总部"
+          ],
+          "winner_confidence": 0.81,
+          "winner_id": "REL-000015"
+        },
+        {
+          "candidate_count": 2,
+          "candidates": [
+            {
+              "confidence": 0.93,
+              "evidence_sentence": "某科技集团 与 生态合作伙伴 之间存在「COLLABORATE」关系",
+              "record_id": "REL-000019",
+              "source": null
+            },
+            {
+              "confidence": 0.81,
+              "evidence_sentence": "某科技集团 与 生态合作伙伴 之间存在「COLLABORATE」关系",
+              "record_id": "REL-000022",
+              "source": null
+            }
+          ],
+          "group_key": [
+            "某科技集团",
+            "COLLABORATE",
+            "生态合作伙伴"
+          ],
+          "winner_confidence": 0.93,
+          "winner_id": "REL-000019"
+        },
+        {
+          "candidate_count": 2,
+          "candidates": [
+            {
+              "confidence": 0.95,
+              "evidence_sentence": "生态合作伙伴 与 某科技集团 之间存在「COLLABORATE」关系",
+              "record_id": "REL-000020",
+              "source": null
+            },
+            {
+              "confidence": 0.78,
+              "evidence_sentence": "生态合作伙伴 与 某科技集团 之间存在「COLLABORATE」关系",
+              "record_id": "REL-000021",
+              "source": null
+            }
+          ],
+          "group_key": [
+            "生态合作伙伴",
+            "COLLABORATE",
+            "某科技集团"
+          ],
+          "winner_confidence": 0.95,
+          "winner_id": "REL-000020"
+        },
+        {
+          "candidate_count": 6,
+          "candidates": [
+            {
+              "confidence": 0.8400000000000001,
+              "evidence_sentence": "知识图谱 与 2024年 之间存在「OCCUR_AT」关系",
+              "record_id": "REL-000023",
+              "source": null
+            },
+            {
+              "confidence": 0.87,
+              "evidence_sentence": "知识图谱 与 2024年 之间存在「OCCUR_AT」关系",
+              "record_id": "REL-000024",
+              "source": null
+            },
+            {
+              "confidence": 0.9,
+              "evidence_sentence": "知识图谱 与 2024年 之间存在「OCCUR_AT」关系",
+              "record_id": "REL-000025",
+              "source": null
+            },
+            {
+              "confidence": 0.81,
+              "evidence_sentence": "知识图谱 与 2024年 之间存在「OCCUR_AT」关系",
+              "record_id": "REL-000029",
+              "source": null
+            },
+            {
+              "confidence": 0.8400000000000001,
+              "evidence_sentence": "知识图谱 与 2024年 之间存在「OCCUR_AT」关系",
+              "record_id": "REL-000030",
+              "source": null
+            },
+            {
+              "confidence": 0.87,
+              "evidence_sentence": "知识图谱 与 2024年 之间存在「OCCUR_AT」关系",
+              "record_id": "REL-000031",
+              "source": null
+            }
+          ],
+          "group_key": [
+            "知识图谱",
+            "OCCUR_AT",
+            "2024年"
+          ],
+          "winner_confidence": 0.9,
+          "winner_id": "REL-000025"
+        },
+        {
+          "candidate_count": 3,
+          "candidates": [
+            {
+              "confidence": 0.93,
+              "evidence_sentence": "信息抽取 与 2024年 之间存在「OCCUR_AT」关系",
+              "record_id": "REL-000026",
+              "source": null
+            },
+            {
+              "confidence": 0.95,
+              "evidence_sentence": "信息抽取 与 2024年 之间存在「OCCUR_AT」关系",
+              "record_id": "REL-000027",
+              "source": null
+            },
+            {
+              "confidence": 0.78,
+              "evidence_sentence": "信息抽取 与 2024年 之间存在「OCCUR_AT」关系",
+              "record_id": "REL-000028",
+              "source": null
+            }
+          ],
+          "group_key": [
+            "信息抽取",
+            "OCCUR_AT",
+            "2024年"
+          ],
+          "winner_confidence": 0.95,
+          "winner_id": "REL-000027"
+        },
+        {
+          "candidate_count": 6,
+          "candidates": [
+            {
+              "confidence": 0.9,
+              "evidence_sentence": "某科技集团 与 5亿元 之间存在「INVEST」关系",
+              "record_id": "REL-000032",
+              "source": null
+            },
+            {
+              "confidence": 0.93,
+              "evidence_sentence": "某科技集团 与 5亿元 之间存在「INVEST」关系",
+              "record_id": "REL-000033",
+              "source": null
+            },
+            {
+              "confidence": 0.95,
+              "evidence_sentence": "某科技集团 与 5亿元 之间存在「INVEST」关系",
+              "record_id": "REL-000034",
+              "source": null
+            },
+            {
+              "confidence": 0.87,
+              "evidence_sentence": "某科技集团 与 5亿元 之间存在「INVEST」关系",
+              "record_id": "REL-000038",
+              "source": null
+            },
+            {
+              "confidence": 0.9,
+              "evidence_sentence": "某科技集团 与 5亿元 之间存在「INVEST」关系",
+              "record_id": "REL-000039",
+              "source": null
+            },
+            {
+              "confidence": 0.93,
+              "evidence_sentence": "某科技集团 与 5亿元 之间存在「INVEST」关系",
+              "record_id": "REL-000040",
+              "source": null
+            }
+          ],
+          "group_key": [
+            "某科技集团",
+            "INVEST",
+            "5亿元"
+          ],
+          "winner_confidence": 0.95,
+          "winner_id": "REL-000034"
+        },
+        {
+          "candidate_count": 3,
+          "candidates": [
+            {
+              "confidence": 0.78,
+              "evidence_sentence": "生态合作伙伴 与 5亿元 之间存在「INVEST」关系",
+              "record_id": "REL-000035",
+              "source": null
+            },
+            {
+              "confidence": 0.81,
+              "evidence_sentence": "生态合作伙伴 与 5亿元 之间存在「INVEST」关系",
+              "record_id": "REL-000036",
+              "source": null
+            },
+            {
+              "confidence": 0.8400000000000001,
+              "evidence_sentence": "生态合作伙伴 与 5亿元 之间存在「INVEST」关系",
+              "record_id": "REL-000037",
+              "source": null
+            }
+          ],
+          "group_key": [
+            "生态合作伙伴",
+            "INVEST",
+            "5亿元"
+          ],
+          "winner_confidence": 0.8400000000000001,
+          "winner_id": "REL-000037"
+        }
+      ],
+      "relation_extract_result": {
+        "entities": 36,
+        "entity_set_id": "DOC-FULL_parsed",
+        "records_written": 16,
+        "relations": 16,
+        "triggers": {
+          "kg_build": {
+            "edges": 16,
+            "nodes": 11,
+            "output": "<DATA_ROOT>/graph/DOC-FULL_parsed_graph.jsonl",
+            "records_written": 16,
+            "relation_set_id": "DOC-FULL_parsed",
+            "triples": 16
+          }
+        }
+      },
+      "relations_file": [
+        {
+          "confidence": 0.81,
+          "evidence_sentence": "某科技集团 与 张三博士 之间存在「EMPLOY」关系",
+          "head_entity": "某科技集团",
+          "head_type": "ORG",
+          "method": "Relation-BERT",
+          "model_version": "v2.3.0",
+          "relation_id": "REL-000001",
+          "relation_type": "EMPLOY",
+          "tail_entity": "张三博士",
+          "tail_type": "PERSON"
+        },
+        {
+          "confidence": 0.8400000000000001,
+          "evidence_sentence": "某科技集团 与 首席科学家 之间存在「EMPLOY」关系",
+          "head_entity": "某科技集团",
+          "head_type": "ORG",
+          "method": "Relation-BERT",
+          "model_version": "v2.3.0",
+          "relation_id": "REL-000002",
+          "relation_type": "EMPLOY",
+          "tail_entity": "首席科学家",
+          "tail_type": "PERSON"
+        },
+        {
+          "confidence": 0.87,
+          "evidence_sentence": "生态合作伙伴 与 张三博士 之间存在「EMPLOY」关系",
+          "head_entity": "生态合作伙伴",
+          "head_type": "ORG",
+          "method": "Relation-BERT",
+          "model_version": "v2.3.0",
+          "relation_id": "REL-000003",
+          "relation_type": "EMPLOY",
+          "tail_entity": "张三博士",
+          "tail_type": "PERSON"
+        },
+        {
+          "confidence": 0.9,
+          "evidence_sentence": "生态合作伙伴 与 首席科学家 之间存在「EMPLOY」关系",
+          "head_entity": "生态合作伙伴",
+          "head_type": "ORG",
+          "method": "Relation-BERT",
+          "model_version": "v2.3.0",
+          "relation_id": "REL-000004",
+          "relation_type": "EMPLOY",
+          "tail_entity": "首席科学家",
+          "tail_type": "PERSON"
+        },
+        {
+          "confidence": 0.93,
+          "evidence_sentence": "某科技集团 与 Beijing 之间存在「LOCATE」关系",
+          "head_entity": "某科技集团",
+          "head_type": "ORG",
+          "method": "Relation-BERT",
+          "model_version": "v2.3.0",
+          "relation_id": "REL-000005",
+          "relation_type": "LOCATE",
+          "tail_entity": "Beijing",
+          "tail_type": "LOC"
+        },
+        {
+          "confidence": 0.95,
+          "evidence_sentence": "某科技集团 与 Shanghai 之间存在「LOCATE」关系",
+          "head_entity": "某科技集团",
+          "head_type": "ORG",
+          "method": "Relation-BERT",
+          "model_version": "v2.3.0",
+          "relation_id": "REL-000006",
+          "relation_type": "LOCATE",
+          "tail_entity": "Shanghai",
+          "tail_type": "LOC"
+        },
+        {
+          "confidence": 0.78,
+          "evidence_sentence": "某科技集团 与 总部 之间存在「LOCATE」关系",
+          "head_entity": "某科技集团",
+          "head_type": "ORG",
+          "method": "Relation-BERT",
+          "model_version": "v2.3.0",
+          "relation_id": "REL-000007",
+          "relation_type": "LOCATE",
+          "tail_entity": "总部",
+          "tail_type": "LOC"
+        },
+        {
+          "confidence": 0.81,
+          "evidence_sentence": "生态合作伙伴 与 Beijing 之间存在「LOCATE」关系",
+          "head_entity": "生态合作伙伴",
+          "head_type": "ORG",
+          "method": "Relation-BERT",
+          "model_version": "v2.3.0",
+          "relation_id": "REL-000008",
+          "relation_type": "LOCATE",
+          "tail_entity": "Beijing",
+          "tail_type": "LOC"
+        },
+        {
+          "confidence": 0.8400000000000001,
+          "evidence_sentence": "生态合作伙伴 与 Shanghai 之间存在「LOCATE」关系",
+          "head_entity": "生态合作伙伴",
+          "head_type": "ORG",
+          "method": "Relation-BERT",
+          "model_version": "v2.3.0",
+          "relation_id": "REL-000009",
+          "relation_type": "LOCATE",
+          "tail_entity": "Shanghai",
+          "tail_type": "LOC"
+        },
+        {
+          "confidence": 0.87,
+          "evidence_sentence": "生态合作伙伴 与 总部 之间存在「LOCATE」关系",
+          "head_entity": "生态合作伙伴",
+          "head_type": "ORG",
+          "method": "Relation-BERT",
+          "model_version": "v2.3.0",
+          "relation_id": "REL-000010",
+          "relation_type": "LOCATE",
+          "tail_entity": "总部",
+          "tail_type": "LOC"
+        },
+        {
+          "confidence": 0.9,
+          "evidence_sentence": "某科技集团 与 生态合作伙伴 之间存在「COLLABORATE」关系",
+          "head_entity": "某科技集团",
+          "head_type": "ORG",
+          "method": "Relation-BERT",
+          "model_version": "v2.3.0",
+          "relation_id": "REL-000011",
+          "relation_type": "COLLABORATE",
+          "tail_entity": "生态合作伙伴",
+          "tail_type": "ORG"
+        },
+        {
+          "confidence": 0.93,
+          "evidence_sentence": "生态合作伙伴 与 某科技集团 之间存在「COLLABORATE」关系",
+          "head_entity": "生态合作伙伴",
+          "head_type": "ORG",
+          "method": "Relation-BERT",
+          "model_version": "v2.3.0",
+          "relation_id": "REL-000012",
+          "relation_type": "COLLABORATE",
+          "tail_entity": "某科技集团",
+          "tail_type": "ORG"
+        },
+        {
+          "confidence": 0.95,
+          "evidence_sentence": "知识图谱 与 2024年 之间存在「OCCUR_AT」关系",
+          "head_entity": "知识图谱",
+          "head_type": "TECH",
+          "method": "Relation-BERT",
+          "model_version": "v2.3.0",
+          "relation_id": "REL-000013",
+          "relation_type": "OCCUR_AT",
+          "tail_entity": "2024年",
+          "tail_type": "TIME"
+        },
+        {
+          "confidence": 0.78,
+          "evidence_sentence": "信息抽取 与 2024年 之间存在「OCCUR_AT」关系",
+          "head_entity": "信息抽取",
+          "head_type": "TECH",
+          "method": "Relation-BERT",
+          "model_version": "v2.3.0",
+          "relation_id": "REL-000014",
+          "relation_type": "OCCUR_AT",
+          "tail_entity": "2024年",
+          "tail_type": "TIME"
+        },
+        {
+          "confidence": 0.81,
+          "evidence_sentence": "某科技集团 与 5亿元 之间存在「INVEST」关系",
+          "head_entity": "某科技集团",
+          "head_type": "ORG",
+          "method": "Relation-BERT",
+          "model_version": "v2.3.0",
+          "relation_id": "REL-000015",
+          "relation_type": "INVEST",
+          "tail_entity": "5亿元",
+          "tail_type": "MONEY"
+        },
+        {
+          "confidence": 0.8400000000000001,
+          "evidence_sentence": "生态合作伙伴 与 5亿元 之间存在「INVEST」关系",
+          "head_entity": "生态合作伙伴",
+          "head_type": "ORG",
+          "method": "Relation-BERT",
+          "model_version": "v2.3.0",
+          "relation_id": "REL-000016",
+          "relation_type": "INVEST",
+          "tail_entity": "5亿元",
+          "tail_type": "MONEY"
+        },
+        {
+          "confidence": 0.8400000000000001,
+          "evidence_sentence": "某科技集团 与 首席科学家 之间存在「EMPLOY」关系",
+          "head_entity": "某科技集团",
+          "head_type": "ORG",
+          "method": "Relation-BERT",
+          "model_version": "v2.3.0",
+          "relation_id": "REL-000002",
+          "relation_type": "EMPLOY",
+          "tail_entity": "首席科学家",
+          "tail_type": "PERSON"
+        },
+        {
+          "confidence": 0.87,
+          "evidence_sentence": "某科技集团 与 张三博士 之间存在「EMPLOY」关系",
+          "head_entity": "某科技集团",
+          "head_type": "ORG",
+          "method": "Relation-BERT",
+          "model_version": "v2.3.0",
+          "relation_id": "REL-000003",
+          "relation_type": "EMPLOY",
+          "tail_entity": "张三博士",
+          "tail_type": "PERSON"
+        },
+        {
+          "confidence": 0.93,
+          "evidence_sentence": "生态合作伙伴 与 首席科学家 之间存在「EMPLOY」关系",
+          "head_entity": "生态合作伙伴",
+          "head_type": "ORG",
+          "method": "Relation-BERT",
+          "model_version": "v2.3.0",
+          "relation_id": "REL-000005",
+          "relation_type": "EMPLOY",
+          "tail_entity": "首席科学家",
+          "tail_type": "PERSON"
+        },
+        {
+          "confidence": 0.95,
+          "evidence_sentence": "生态合作伙伴 与 张三博士 之间存在「EMPLOY」关系",
+          "head_entity": "生态合作伙伴",
+          "head_type": "ORG",
+          "method": "Relation-BERT",
+          "model_version": "v2.3.0",
+          "relation_id": "REL-000006",
+          "relation_type": "EMPLOY",
+          "tail_entity": "张三博士",
+          "tail_type": "PERSON"
+        },
+        {
+          "confidence": 0.87,
+          "evidence_sentence": "某科技集团 与 Beijing 之间存在「LOCATE」关系",
+          "head_entity": "某科技集团",
+          "head_type": "ORG",
+          "method": "Relation-BERT",
+          "model_version": "v2.3.0",
+          "relation_id": "REL-000010",
+          "relation_type": "LOCATE",
+          "tail_entity": "Beijing",
+          "tail_type": "LOC"
+        },
+        {
+          "confidence": 0.9,
+          "evidence_sentence": "某科技集团 与 Shanghai 之间存在「LOCATE」关系",
+          "head_entity": "某科技集团",
+          "head_type": "ORG",
+          "method": "Relation-BERT",
+          "model_version": "v2.3.0",
+          "relation_id": "REL-000011",
+          "relation_type": "LOCATE",
+          "tail_entity": "Shanghai",
+          "tail_type": "LOC"
+        },
+        {
+          "confidence": 0.93,
+          "evidence_sentence": "某科技集团 与 总部 之间存在「LOCATE」关系",
+          "head_entity": "某科技集团",
+          "head_type": "ORG",
+          "method": "Relation-BERT",
+          "model_version": "v2.3.0",
+          "relation_id": "REL-000012",
+          "relation_type": "LOCATE",
+          "tail_entity": "总部",
+          "tail_type": "LOC"
+        },
+        {
+          "confidence": 0.95,
+          "evidence_sentence": "生态合作伙伴 与 Beijing 之间存在「LOCATE」关系",
+          "head_entity": "生态合作伙伴",
+          "head_type": "ORG",
+          "method": "Relation-BERT",
+          "model_version": "v2.3.0",
+          "relation_id": "REL-000013",
+          "relation_type": "LOCATE",
+          "tail_entity": "Beijing",
+          "tail_type": "LOC"
+        },
+        {
+          "confidence": 0.78,
+          "evidence_sentence": "生态合作伙伴 与 Shanghai 之间存在「LOCATE」关系",
+          "head_entity": "生态合作伙伴",
+          "head_type": "ORG",
+          "method": "Relation-BERT",
+          "model_version": "v2.3.0",
+          "relation_id": "REL-000014",
+          "relation_type": "LOCATE",
+          "tail_entity": "Shanghai",
+          "tail_type": "LOC"
+        },
+        {
+          "confidence": 0.81,
+          "evidence_sentence": "生态合作伙伴 与 总部 之间存在「LOCATE」关系",
+          "head_entity": "生态合作伙伴",
+          "head_type": "ORG",
+          "method": "Relation-BERT",
+          "model_version": "v2.3.0",
+          "relation_id": "REL-000015",
+          "relation_type": "LOCATE",
+          "tail_entity": "总部",
+          "tail_type": "LOC"
+        },
+        {
+          "confidence": 0.93,
+          "evidence_sentence": "某科技集团 与 生态合作伙伴 之间存在「COLLABORATE」关系",
+          "head_entity": "某科技集团",
+          "head_type": "ORG",
+          "method": "Relation-BERT",
+          "model_version": "v2.3.0",
+          "relation_id": "REL-000019",
+          "relation_type": "COLLABORATE",
+          "tail_entity": "生态合作伙伴",
+          "tail_type": "ORG"
+        },
+        {
+          "confidence": 0.95,
+          "evidence_sentence": "生态合作伙伴 与 某科技集团 之间存在「COLLABORATE」关系",
+          "head_entity": "生态合作伙伴",
+          "head_type": "ORG",
+          "method": "Relation-BERT",
+          "model_version": "v2.3.0",
+          "relation_id": "REL-000020",
+          "relation_type": "COLLABORATE",
+          "tail_entity": "某科技集团",
+          "tail_type": "ORG"
+        },
+        {
+          "confidence": 0.93,
+          "evidence_sentence": "信息抽取 与 2024年 之间存在「OCCUR_AT」关系",
+          "head_entity": "信息抽取",
+          "head_type": "TECH",
+          "method": "Relation-BERT",
+          "model_version": "v2.3.0",
+          "relation_id": "REL-000026",
+          "relation_type": "OCCUR_AT",
+          "tail_entity": "2024年",
+          "tail_type": "TIME"
+        },
+        {
+          "confidence": 0.95,
+          "evidence_sentence": "知识图谱 与 2024年 之间存在「OCCUR_AT」关系",
+          "head_entity": "知识图谱",
+          "head_type": "TECH",
+          "method": "Relation-BERT",
+          "model_version": "v2.3.0",
+          "relation_id": "REL-000027",
+          "relation_type": "OCCUR_AT",
+          "tail_entity": "2024年",
+          "tail_type": "TIME"
+        },
+        {
+          "confidence": 0.9,
+          "evidence_sentence": "生态合作伙伴 与 5亿元 之间存在「INVEST」关系",
+          "head_entity": "生态合作伙伴",
+          "head_type": "ORG",
+          "method": "Relation-BERT",
+          "model_version": "v2.3.0",
+          "relation_id": "REL-000032",
+          "relation_type": "INVEST",
+          "tail_entity": "5亿元",
+          "tail_type": "MONEY"
+        },
+        {
+          "confidence": 0.95,
+          "evidence_sentence": "某科技集团 与 5亿元 之间存在「INVEST」关系",
+          "head_entity": "某科技集团",
+          "head_type": "ORG",
+          "method": "Relation-BERT",
+          "model_version": "v2.3.0",
+          "relation_id": "REL-000034",
+          "relation_type": "INVEST",
+          "tail_entity": "5亿元",
+          "tail_type": "MONEY"
+        },
+        {
+          "confidence": 0.8400000000000001,
+          "evidence_sentence": "某科技集团 与 首席科学家 之间存在「EMPLOY」关系",
+          "head_entity": "某科技集团",
+          "head_type": "ORG",
+          "method": "Relation-BERT",
+          "model_version": "v2.3.0",
+          "relation_id": "REL-000002",
+          "relation_type": "EMPLOY",
+          "tail_entity": "首席科学家",
+          "tail_type": "PERSON"
+        },
+        {
+          "confidence": 0.87,
+          "evidence_sentence": "某科技集团 与 张三博士 之间存在「EMPLOY」关系",
+          "head_entity": "某科技集团",
+          "head_type": "ORG",
+          "method": "Relation-BERT",
+          "model_version": "v2.3.0",
+          "relation_id": "REL-000003",
+          "relation_type": "EMPLOY",
+          "tail_entity": "张三博士",
+          "tail_type": "PERSON"
+        },
+        {
+          "confidence": 0.93,
+          "evidence_sentence": "生态合作伙伴 与 首席科学家 之间存在「EMPLOY」关系",
+          "head_entity": "生态合作伙伴",
+          "head_type": "ORG",
+          "method": "Relation-BERT",
+          "model_version": "v2.3.0",
+          "relation_id": "REL-000005",
+          "relation_type": "EMPLOY",
+          "tail_entity": "首席科学家",
+          "tail_type": "PERSON"
+        },
+        {
+          "confidence": 0.95,
+          "evidence_sentence": "生态合作伙伴 与 张三博士 之间存在「EMPLOY」关系",
+          "head_entity": "生态合作伙伴",
+          "head_type": "ORG",
+          "method": "Relation-BERT",
+          "model_version": "v2.3.0",
+          "relation_id": "REL-000006",
+          "relation_type": "EMPLOY",
+          "tail_entity": "张三博士",
+          "tail_type": "PERSON"
+        },
+        {
+          "confidence": 0.87,
+          "evidence_sentence": "某科技集团 与 Beijing 之间存在「LOCATE」关系",
+          "head_entity": "某科技集团",
+          "head_type": "ORG",
+          "method": "Relation-BERT",
+          "model_version": "v2.3.0",
+          "relation_id": "REL-000010",
+          "relation_type": "LOCATE",
+          "tail_entity": "Beijing",
+          "tail_type": "LOC"
+        },
+        {
+          "confidence": 0.9,
+          "evidence_sentence": "某科技集团 与 Shanghai 之间存在「LOCATE」关系",
+          "head_entity": "某科技集团",
+          "head_type": "ORG",
+          "method": "Relation-BERT",
+          "model_version": "v2.3.0",
+          "relation_id": "REL-000011",
+          "relation_type": "LOCATE",
+          "tail_entity": "Shanghai",
+          "tail_type": "LOC"
+        },
+        {
+          "confidence": 0.93,
+          "evidence_sentence": "某科技集团 与 总部 之间存在「LOCATE」关系",
+          "head_entity": "某科技集团",
+          "head_type": "ORG",
+          "method": "Relation-BERT",
+          "model_version": "v2.3.0",
+          "relation_id": "REL-000012",
+          "relation_type": "LOCATE",
+          "tail_entity": "总部",
+          "tail_type": "LOC"
+        },
+        {
+          "confidence": 0.95,
+          "evidence_sentence": "生态合作伙伴 与 Beijing 之间存在「LOCATE」关系",
+          "head_entity": "生态合作伙伴",
+          "head_type": "ORG",
+          "method": "Relation-BERT",
+          "model_version": "v2.3.0",
+          "relation_id": "REL-000013",
+          "relation_type": "LOCATE",
+          "tail_entity": "Beijing",
+          "tail_type": "LOC"
+        },
+        {
+          "confidence": 0.78,
+          "evidence_sentence": "生态合作伙伴 与 Shanghai 之间存在「LOCATE」关系",
+          "head_entity": "生态合作伙伴",
+          "head_type": "ORG",
+          "method": "Relation-BERT",
+          "model_version": "v2.3.0",
+          "relation_id": "REL-000014",
+          "relation_type": "LOCATE",
+          "tail_entity": "Shanghai",
+          "tail_type": "LOC"
+        },
+        {
+          "confidence": 0.81,
+          "evidence_sentence": "生态合作伙伴 与 总部 之间存在「LOCATE」关系",
+          "head_entity": "生态合作伙伴",
+          "head_type": "ORG",
+          "method": "Relation-BERT",
+          "model_version": "v2.3.0",
+          "relation_id": "REL-000015",
+          "relation_type": "LOCATE",
+          "tail_entity": "总部",
+          "tail_type": "LOC"
+        },
+        {
+          "confidence": 0.93,
+          "evidence_sentence": "某科技集团 与 生态合作伙伴 之间存在「COLLABORATE」关系",
+          "head_entity": "某科技集团",
+          "head_type": "ORG",
+          "method": "Relation-BERT",
+          "model_version": "v2.3.0",
+          "relation_id": "REL-000019",
+          "relation_type": "COLLABORATE",
+          "tail_entity": "生态合作伙伴",
+          "tail_type": "ORG"
+        },
+        {
+          "confidence": 0.95,
+          "evidence_sentence": "生态合作伙伴 与 某科技集团 之间存在「COLLABORATE」关系",
+          "head_entity": "生态合作伙伴",
+          "head_type": "ORG",
+          "method": "Relation-BERT",
+          "model_version": "v2.3.0",
+          "relation_id": "REL-000020",
+          "relation_type": "COLLABORATE",
+          "tail_entity": "某科技集团",
+          "tail_type": "ORG"
+        },
+        {
+          "confidence": 0.9,
+          "evidence_sentence": "知识图谱 与 2024年 之间存在「OCCUR_AT」关系",
+          "head_entity": "知识图谱",
+          "head_type": "TECH",
+          "method": "Relation-BERT",
+          "model_version": "v2.3.0",
+          "relation_id": "REL-000025",
+          "relation_type": "OCCUR_AT",
+          "tail_entity": "2024年",
+          "tail_type": "TIME"
+        },
+        {
+          "confidence": 0.95,
+          "evidence_sentence": "信息抽取 与 2024年 之间存在「OCCUR_AT」关系",
+          "head_entity": "信息抽取",
+          "head_type": "TECH",
+          "method": "Relation-BERT",
+          "model_version": "v2.3.0",
+          "relation_id": "REL-000027",
+          "relation_type": "OCCUR_AT",
+          "tail_entity": "2024年",
+          "tail_type": "TIME"
+        },
+        {
+          "confidence": 0.95,
+          "evidence_sentence": "某科技集团 与 5亿元 之间存在「INVEST」关系",
+          "head_entity": "某科技集团",
+          "head_type": "ORG",
+          "method": "Relation-BERT",
+          "model_version": "v2.3.0",
+          "relation_id": "REL-000034",
+          "relation_type": "INVEST",
+          "tail_entity": "5亿元",
+          "tail_type": "MONEY"
+        },
+        {
+          "confidence": 0.8400000000000001,
+          "evidence_sentence": "生态合作伙伴 与 5亿元 之间存在「INVEST」关系",
+          "head_entity": "生态合作伙伴",
+          "head_type": "ORG",
+          "method": "Relation-BERT",
+          "model_version": "v2.3.0",
+          "relation_id": "REL-000037",
+          "relation_type": "INVEST",
+          "tail_entity": "5亿元",
+          "tail_type": "MONEY"
+        },
+        {
+          "confidence": 0.8400000000000001,
+          "evidence_sentence": "某科技集团 与 首席科学家 之间存在「EMPLOY」关系",
+          "head_entity": "某科技集团",
+          "head_type": "ORG",
+          "method": "Relation-BERT",
+          "model_version": "v2.3.0",
+          "relation_id": "REL-000002",
+          "relation_type": "EMPLOY",
+          "tail_entity": "首席科学家",
+          "tail_type": "PERSON"
+        },
+        {
+          "confidence": 0.87,
+          "evidence_sentence": "某科技集团 与 张三博士 之间存在「EMPLOY」关系",
+          "head_entity": "某科技集团",
+          "head_type": "ORG",
+          "method": "Relation-BERT",
+          "model_version": "v2.3.0",
+          "relation_id": "REL-000003",
+          "relation_type": "EMPLOY",
+          "tail_entity": "张三博士",
+          "tail_type": "PERSON"
+        },
+        {
+          "confidence": 0.93,
+          "evidence_sentence": "生态合作伙伴 与 首席科学家 之间存在「EMPLOY」关系",
+          "head_entity": "生态合作伙伴",
+          "head_type": "ORG",
+          "method": "Relation-BERT",
+          "model_version": "v2.3.0",
+          "relation_id": "REL-000005",
+          "relation_type": "EMPLOY",
+          "tail_entity": "首席科学家",
+          "tail_type": "PERSON"
+        },
+        {
+          "confidence": 0.95,
+          "evidence_sentence": "生态合作伙伴 与 张三博士 之间存在「EMPLOY」关系",
+          "head_entity": "生态合作伙伴",
+          "head_type": "ORG",
+          "method": "Relation-BERT",
+          "model_version": "v2.3.0",
+          "relation_id": "REL-000006",
+          "relation_type": "EMPLOY",
+          "tail_entity": "张三博士",
+          "tail_type": "PERSON"
+        },
+        {
+          "confidence": 0.87,
+          "evidence_sentence": "某科技集团 与 Beijing 之间存在「LOCATE」关系",
+          "head_entity": "某科技集团",
+          "head_type": "ORG",
+          "method": "Relation-BERT",
+          "model_version": "v2.3.0",
+          "relation_id": "REL-000010",
+          "relation_type": "LOCATE",
+          "tail_entity": "Beijing",
+          "tail_type": "LOC"
+        },
+        {
+          "confidence": 0.9,
+          "evidence_sentence": "某科技集团 与 Shanghai 之间存在「LOCATE」关系",
+          "head_entity": "某科技集团",
+          "head_type": "ORG",
+          "method": "Relation-BERT",
+          "model_version": "v2.3.0",
+          "relation_id": "REL-000011",
+          "relation_type": "LOCATE",
+          "tail_entity": "Shanghai",
+          "tail_type": "LOC"
+        },
+        {
+          "confidence": 0.93,
+          "evidence_sentence": "某科技集团 与 总部 之间存在「LOCATE」关系",
+          "head_entity": "某科技集团",
+          "head_type": "ORG",
+          "method": "Relation-BERT",
+          "model_version": "v2.3.0",
+          "relation_id": "REL-000012",
+          "relation_type": "LOCATE",
+          "tail_entity": "总部",
+          "tail_type": "LOC"
+        },
+        {
+          "confidence": 0.95,
+          "evidence_sentence": "生态合作伙伴 与 Beijing 之间存在「LOCATE」关系",
+          "head_entity": "生态合作伙伴",
+          "head_type": "ORG",
+          "method": "Relation-BERT",
+          "model_version": "v2.3.0",
+          "relation_id": "REL-000013",
+          "relation_type": "LOCATE",
+          "tail_entity": "Beijing",
+          "tail_type": "LOC"
+        },
+        {
+          "confidence": 0.78,
+          "evidence_sentence": "生态合作伙伴 与 Shanghai 之间存在「LOCATE」关系",
+          "head_entity": "生态合作伙伴",
+          "head_type": "ORG",
+          "method": "Relation-BERT",
+          "model_version": "v2.3.0",
+          "relation_id": "REL-000014",
+          "relation_type": "LOCATE",
+          "tail_entity": "Shanghai",
+          "tail_type": "LOC"
+        },
+        {
+          "confidence": 0.81,
+          "evidence_sentence": "生态合作伙伴 与 总部 之间存在「LOCATE」关系",
+          "head_entity": "生态合作伙伴",
+          "head_type": "ORG",
+          "method": "Relation-BERT",
+          "model_version": "v2.3.0",
+          "relation_id": "REL-000015",
+          "relation_type": "LOCATE",
+          "tail_entity": "总部",
+          "tail_type": "LOC"
+        },
+        {
+          "confidence": 0.93,
+          "evidence_sentence": "某科技集团 与 生态合作伙伴 之间存在「COLLABORATE」关系",
+          "head_entity": "某科技集团",
+          "head_type": "ORG",
+          "method": "Relation-BERT",
+          "model_version": "v2.3.0",
+          "relation_id": "REL-000019",
+          "relation_type": "COLLABORATE",
+          "tail_entity": "生态合作伙伴",
+          "tail_type": "ORG"
+        },
+        {
+          "confidence": 0.95,
+          "evidence_sentence": "生态合作伙伴 与 某科技集团 之间存在「COLLABORATE」关系",
+          "head_entity": "生态合作伙伴",
+          "head_type": "ORG",
+          "method": "Relation-BERT",
+          "model_version": "v2.3.0",
+          "relation_id": "REL-000020",
+          "relation_type": "COLLABORATE",
+          "tail_entity": "某科技集团",
+          "tail_type": "ORG"
+        },
+        {
+          "confidence": 0.9,
+          "evidence_sentence": "知识图谱 与 2024年 之间存在「OCCUR_AT」关系",
+          "head_entity": "知识图谱",
+          "head_type": "TECH",
+          "method": "Relation-BERT",
+          "model_version": "v2.3.0",
+          "relation_id": "REL-000025",
+          "relation_type": "OCCUR_AT",
+          "tail_entity": "2024年",
+          "tail_type": "TIME"
+        },
+        {
+          "confidence": 0.95,
+          "evidence_sentence": "信息抽取 与 2024年 之间存在「OCCUR_AT」关系",
+          "head_entity": "信息抽取",
+          "head_type": "TECH",
+          "method": "Relation-BERT",
+          "model_version": "v2.3.0",
+          "relation_id": "REL-000027",
+          "relation_type": "OCCUR_AT",
+          "tail_entity": "2024年",
+          "tail_type": "TIME"
+        },
+        {
+          "confidence": 0.95,
+          "evidence_sentence": "某科技集团 与 5亿元 之间存在「INVEST」关系",
+          "head_entity": "某科技集团",
+          "head_type": "ORG",
+          "method": "Relation-BERT",
+          "model_version": "v2.3.0",
+          "relation_id": "REL-000034",
+          "relation_type": "INVEST",
+          "tail_entity": "5亿元",
+          "tail_type": "MONEY"
+        },
+        {
+          "confidence": 0.8400000000000001,
+          "evidence_sentence": "生态合作伙伴 与 5亿元 之间存在「INVEST」关系",
+          "head_entity": "生态合作伙伴",
+          "head_type": "ORG",
+          "method": "Relation-BERT",
+          "model_version": "v2.3.0",
+          "relation_id": "REL-000037",
+          "relation_type": "INVEST",
+          "tail_entity": "5亿元",
+          "tail_type": "MONEY"
+        }
+      ]
+    },
+    "tie": {
+      "kg": {
+        "artifacts": {
+          "graph_checkpoint": {
+            "avg_confidence": 0.79,
+            "edges": 2,
+            "evidence_file": "<DATA_ROOT>/relation_evidence/S-TIE_graph_relation_evidence.jsonl",
+            "input_checksum": "17067a91237d0618",
+            "min_confidence": 0.7,
+            "nodes": 3,
+            "relation_set_id": "S-TIE",
+            "version": "v1.0"
+          },
+          "graph_evidence_manifest": {
+            "evidence_file": "<DATA_ROOT>/relation_evidence/S-TIE_graph_relation_evidence.jsonl",
+            "evidence_group_count": 2,
+            "group_key": [
+              "head",
+              "relation",
+              "tail"
+            ],
+            "input_checksum": "17067a91237d0618",
+            "input_record_count": 2,
+            "relation_set_id": "S-TIE",
+            "tie_break_rule": "同分保留输入序列先到者（严格大于才替换）"
+          },
+          "graph_evidence_rows": [
+            {
+              "candidate_count": 1,
+              "candidates": [
+                {
+                  "confidence": 0.88,
+                  "evidence_sentence": "来源A:甲集团-EMPLOY-张三@0.88",
+                  "record_id": "REL-000001",
+                  "source": "来源A"
+                }
+              ],
+              "group_key": [
+                "甲集团",
+                "EMPLOY",
+                "张三"
+              ],
+              "winner_confidence": 0.88,
+              "winner_id": "REL-000001"
+            },
+            {
+              "candidate_count": 1,
+              "candidates": [
+                {
+                  "confidence": 0.7,
+                  "evidence_sentence": "来源A:甲集团-LOCATE-Beijing@0.7",
+                  "record_id": "REL-000003",
+                  "source": "来源A"
+                }
+              ],
+              "group_key": [
+                "甲集团",
+                "LOCATE",
+                "Beijing"
+              ],
+              "winner_confidence": 0.7,
+              "winner_id": "REL-000003"
+            }
+          ],
+          "graph_triples": [
+            {
+              "confidence": 0.88,
+              "graph_version": "v1.0",
+              "head": "甲集团",
+              "relation": "EMPLOY",
+              "source": "S-TIE",
+              "tail": "张三",
+              "triple_id": "TRIPLE-REL-000001"
+            },
+            {
+              "confidence": 0.7,
+              "graph_version": "v1.0",
+              "head": "甲集团",
+              "relation": "LOCATE",
+              "source": "S-TIE",
+              "tail": "Beijing",
+              "triple_id": "TRIPLE-REL-000003"
+            }
+          ],
+          "relation_checkpoint": null,
+          "relation_evidence_manifest": {
+            "entity_set_id": "S-TIE",
+            "evidence_file": "<DATA_ROOT>/relation_evidence/S-TIE_relation_evidence.jsonl",
+            "evidence_group_count": 2,
+            "evidence_records_written": 2,
+            "input_checksum": "bcdd53db24b2f7eb",
+            "input_record_count": 3
+          },
+          "relation_evidence_rows": [
+            {
+              "candidate_count": 2,
+              "candidates": [
+                {
+                  "confidence": 0.88,
+                  "evidence_sentence": "来源A:甲集团-EMPLOY-张三@0.88",
+                  "record_id": "REL-000001",
+                  "source": "来源A"
+                },
+                {
+                  "confidence": 0.88,
+                  "evidence_sentence": "来源B:甲集团-EMPLOY-张三@0.88",
+                  "record_id": "REL-000002",
+                  "source": "来源B"
+                }
+              ],
+              "group_key": [
+                "甲集团",
+                "EMPLOY",
+                "张三"
+              ],
+              "winner_confidence": 0.88,
+              "winner_id": "REL-000001"
+            },
+            {
+              "candidate_count": 1,
+              "candidates": [
+                {
+                  "confidence": 0.7,
+                  "evidence_sentence": "来源A:甲集团-LOCATE-Beijing@0.7",
+                  "record_id": "REL-000003",
+                  "source": "来源A"
+                }
+              ],
+              "group_key": [
+                "甲集团",
+                "LOCATE",
+                "Beijing"
+              ],
+              "winner_confidence": 0.7,
+              "winner_id": "REL-000003"
+            }
+          ]
+        },
+        "build_result": {
+          "edges": 2,
+          "nodes": 3,
+          "records_written": 2,
+          "relation_set_id": "S-TIE",
+          "triples": 2
+        }
+      },
+      "relation_dedup": [
+        {
+          "confidence": 0.88,
+          "evidence_sentence": "来源A:甲集团-EMPLOY-张三@0.88",
+          "head_entity": "甲集团",
+          "head_type": "ORG",
+          "method": "Relation-BERT",
+          "model_version": "v2.3.0",
+          "relation_id": "REL-000001",
+          "relation_type": "EMPLOY",
+          "source": "来源A",
+          "tail_entity": "张三",
+          "tail_type": "PERSON"
+        },
+        {
+          "confidence": 0.7,
+          "evidence_sentence": "来源A:甲集团-LOCATE-Beijing@0.7",
+          "head_entity": "甲集团",
+          "head_type": "ORG",
+          "method": "Relation-BERT",
+          "model_version": "v2.3.0",
+          "relation_id": "REL-000003",
+          "relation_type": "LOCATE",
+          "source": "来源A",
+          "tail_entity": "Beijing",
+          "tail_type": "PERSON"
+        }
+      ]
+    }
+  },
+  "services_dir": "app/services"
+}
